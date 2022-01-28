@@ -8,7 +8,7 @@
     "format": "prettier --write './**/*.{js,ts,tsx}' --config ./.prettierrc.js"
   },
   "dependencies": {
-    "@heroicons/react": "^1.0.5",
+    "@heroicons/react": "1.0.5",
     "next": "latest",
     "react": "17.0.2",
     "react-dom": "17.0.2"
