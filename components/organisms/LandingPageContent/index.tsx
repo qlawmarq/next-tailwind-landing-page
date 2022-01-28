@@ -7,7 +7,7 @@ import { Button } from '../../atoms/Button';
 export const LandingPageContent = () => {
   return (
     <Container>
-      <div className="relative mx-auto flex flex-col sm:flex-row py-6">
+      <div className="relative mx-auto flex flex-col py-6 sm:flex-row">
         <div className="relative z-10 sm:w-6/12">
           <Image className="" src={analyzeData} alt="Analyze Data" />
         </div>
