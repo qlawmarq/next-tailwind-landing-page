@@ -14,7 +14,7 @@ export const Accordion: React.FC<Props & HTMLAttributes<HTMLElement>> = ({
   answer,
   ...props
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const styles = useSpring({
     opacity: isOpen ? 1 : 0,
     display: isOpen ? 'block' : 'none',
@@ -33,9 +33,9 @@ export const Accordion: React.FC<Props & HTMLAttributes<HTMLElement>> = ({
         <div className="px-2">
           <div>
             {isOpen ? (
-              <ChevronDownIcon className="h-5 w-5" />
+              <ChevronDownIcon className="h-6 w-6" />
             ) : (
-              <ChevronUpIcon className="h-5 w-5" />
+              <ChevronUpIcon className="h-6 w-6" />
             )}
           </div>
         </div>
