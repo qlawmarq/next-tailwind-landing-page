@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { Header } from '../../organisms/Header';
 import { Footer } from '../../organisms/Footer';
-import { Landing } from '../../templates/Landing';
+import { CTA } from '../../templates/CTA';
 import { FAQ } from '../../templates/FAQ';
 import { Prices } from '../../templates/Prices';
 
@@ -14,7 +14,7 @@ export const LandingPage = () => {
       </Head>
       <main className="font-montserrat bg-gray-100">
         <Header />
-        <Landing />
+        <CTA />
         <FAQ />
         <Prices />
         <Footer />

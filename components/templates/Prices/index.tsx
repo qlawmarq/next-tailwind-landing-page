@@ -1,5 +1,5 @@
 import { Container } from '../../atoms/Container';
-import { PriceCard } from '../../organisms/PriceCard';
+import { PriceCard } from '../../molecules/PriceCard';
 
 export const Prices = () => {
   return (
