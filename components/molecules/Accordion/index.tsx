@@ -2,7 +2,7 @@ import React, { useState, HTMLAttributes } from 'react';
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/outline';
 import { animated, useSpring } from '@react-spring/web';
 import { Card } from '../../atoms/Card';
-import { Paragraph} from '../../atoms/Typography';
+import { Paragraph } from '../../atoms/Typography';
 
 type Props = {
   question: React.ReactNode;
@@ -29,7 +29,8 @@ export const Accordion: React.FC<Props & HTMLAttributes<HTMLElement>> = ({
         className="flex cursor-pointer flex-row-reverse "
       >
         <div className="flex-auto">
-          <Paragraph>{question}</Paragraph></div>
+          <Paragraph>{question}</Paragraph>
+        </div>
         <div className="px-2">
           <div>
             {isOpen ? (

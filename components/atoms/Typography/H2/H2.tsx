@@ -4,7 +4,7 @@ export const H2: React.FC<HTMLAttributes<HTMLHeadingElement>> = ({
 }) => {
   const className = `${props.className} text-3xl font-bold text-blue-900`;
   return (
-    <h2 {...props} className={className} >
+    <h2 {...props} className={className}>
       {props.children}
     </h2>
   );

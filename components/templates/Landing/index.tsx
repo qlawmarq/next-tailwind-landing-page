@@ -4,10 +4,10 @@ import { H1, Paragraph } from '../../atoms/Typography';
 import { Container } from '../../atoms/Container';
 import { Button } from '../../atoms/Button';
 
-export const LandingPageContent = () => {
+export const Landing = () => {
   return (
     <Container>
-      <div className="relative w-full mx-auto flex flex-col py-6 sm:flex-row">
+      <div className="relative mx-auto flex w-full flex-col py-6 sm:flex-row">
         <div className="relative sm:w-6/12">
           <Image className="" src={analyzeData} alt="Analyze Data" />
         </div>
