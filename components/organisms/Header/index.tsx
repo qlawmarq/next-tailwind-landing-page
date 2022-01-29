@@ -25,7 +25,7 @@ export const Header: React.FC = () => {
         <Container>
           <div className="flex items-start text-2xl font-black text-blue-900">
             Company
-            <span className="ml-2 h-3 w-3 rounded-full bg-purple-600"></span>
+            <span className="ml-2 h-3 w-3 rounded-full bg-blue-700"></span>
           </div>
 
           <div className="z-20 flex items-end">
@@ -37,40 +37,40 @@ export const Header: React.FC = () => {
             >
               <animated.span
                 style={hamburgerStyle1}
-                className="mb-1 h-1 w-6 rounded-full bg-purple-800"
+                className="mb-1 h-1 w-6 rounded-full bg-blue-800"
               />
               <animated.span
                 style={hamburgerStyle2}
-                className="mb-1 h-1 w-6 rounded-full bg-purple-800"
+                className="mb-1 h-1 w-6 rounded-full bg-blue-800"
               />
               <animated.span
                 style={hamburgerStyle3}
-                className="mb-1 h-1 w-6 rounded-full bg-purple-800"
+                className="mb-1 h-1 w-6 rounded-full bg-blue-800"
               />
             </button>
           </div>
           <animated.nav
             style={navStyle}
-            className="fixed top-0 z-10 flex h-full flex-col bg-white p-6 text-lg text-purple-900"
+            className="fixed top-0 z-10 flex h-full flex-col bg-white p-6 text-lg text-blue-900"
           >
             <ul className="mt-24 flex flex-col">
               <li>
-                <a href="#" className="flex py-2 px-8 hover:text-purple-700">
+                <a href="#" className="flex py-2 px-8 hover:text-blue-700">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="flex py-2 px-8 hover:text-purple-700">
+                <a href="#" className="flex py-2 px-8 hover:text-blue-700">
                   Service
                 </a>
               </li>
               <li>
-                <a href="#" className="flex py-2 px-8 hover:text-purple-700">
+                <a href="#" className="flex py-2 px-8 hover:text-blue-700">
                   Portfolio
                 </a>
               </li>
               <li>
-                <a href="#" className="flex py-2 px-8 hover:text-purple-700">
+                <a href="#" className="flex py-2 px-8 hover:text-blue-700">
                   Contact us
                 </a>
               </li>

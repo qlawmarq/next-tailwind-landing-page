@@ -28,7 +28,9 @@ export const PriceCard: React.FC<Props> = (props) => {
         {props.features.map((feature, idx) => {
           return (
             <li key={idx} className="flex items-start">
-              <CheckCircleIcon className="h-6 w-6 text-green-300" />
+              <div>
+                <CheckCircleIcon className="h-6 w-6 text-green-300" />
+              </div>
               <Paragraph className="ml-3 font-medium">{feature}</Paragraph>
             </li>
           );
