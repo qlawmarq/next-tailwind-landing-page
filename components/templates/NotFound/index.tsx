@@ -7,21 +7,17 @@ import { Button } from '../../atoms/Button';
 export const NotFound = () => {
   return (
     <Container>
-      <div className="relative min-h-screen mx-auto flex w-full flex-wrap items-center py-6">
+      <div className="relative mx-auto flex min-h-screen w-full flex-wrap items-center py-6">
         <div className="w-full p-4 text-center md:w-5/12">
-            <Image className="" src={MagicGirl} alt="Not Found" />
+          <Image className="" src={MagicGirl} alt="Not Found" />
         </div>
         <div className="w-full p-4 text-center md:w-7/12 md:text-left">
-          <H1 className='mb-3'>404</H1>
-          <H3 className='mb-6'>
-            Oops. This page has gone missing.
-          </H3>
-          <Paragraph className='mb-12'>
+          <H1 className="mb-3">404</H1>
+          <H3 className="mb-6">Oops. This page has gone missing.</H3>
+          <Paragraph className="mb-12">
             You may have mistyped the address or the page may have moved.
           </Paragraph>
-          <Button>
-            Go Home
-          </Button>
+          <Button>Go Home</Button>
         </div>
       </div>
     </Container>

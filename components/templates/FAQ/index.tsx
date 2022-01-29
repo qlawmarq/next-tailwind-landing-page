@@ -1,4 +1,4 @@
-import { H1, Paragraph } from '../../atoms/Typography';
+import { H1, H5, Paragraph } from '../../atoms/Typography';
 import { Container } from '../../atoms/Container';
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/outline';
 import { Card } from '../../atoms/Card';
@@ -11,9 +11,7 @@ export const FAQ = () => {
         <div className="flex flex-col md:flex-row">
           <div className="flex flex-col">
             <H1>Frequently asked Questions</H1>
-            <Paragraph className="my-2">
-              Wondering how our service works ?
-            </Paragraph>
+            <H5 className="my-2">Wondering how our service works ?</H5>
           </div>
           <div className="md:w-2/3">
             <Accordion
