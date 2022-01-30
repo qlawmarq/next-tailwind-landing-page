@@ -10,7 +10,7 @@ export const Footer = () => {
     <footer className="pt-12 pb-6">
       <Container>
         <div className="relative m-auto flex w-full flex-col">
-          <div className="flex justify-between flex-row">
+          <div className="flex flex-row justify-between">
             <div>
               <Paragraph className="text-xs font-medium uppercase text-gray-500">
                 Services
@@ -30,13 +30,11 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div className='flex justify-between flex-row mt-6'>
+          <div className="mt-6 flex flex-row justify-between">
             <div>
-            <Paragraph>
-              © Copyright 2020. All Rights Reserved.
-            </Paragraph>
+              <Paragraph>© Copyright 2020. All Rights Reserved.</Paragraph>
             </div>
-            <div className='flex'>
+            <div className="flex">
               <TwitterIcon color="#1e3a8a" />
               <YoutubeIcon color="#1e3a8a" />
               <InstagramIcon color="#1e3a8a" />
