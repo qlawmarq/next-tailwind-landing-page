@@ -1,0 +1,175 @@
+import React, { useEffect,useRef, useCallback, useState, CSSProperties } from 'react';
+import { useSprings, a, useSpring } from '@react-spring/web';
+import { ArrowRightIcon, ArrowLeftIcon } from '@heroicons/react/solid';
+import { CarouselItem } from './CarouselItem';
+
+type CarouselProps = {
+  items: React.ReactNode[];
+  width: number;
+  showButtons: boolean;
+  showCounter: boolean;
+};
+
+export const Carousel: React.FC<CarouselProps> = ({
+  items,
+  width,
+  showButtons = true,
+  showCounter = true,
+}) => {
+  const [visible, setVisible] = useState(items.length - 2);
+
+  if (items.length <= 2) {
+    alert(
+      "The slider doesn't handle two or less items very well, please use it with an array of at least 3 items in length"
+    );
+  }
+
+  const idx = useCallback(
+    (x, l = items.length) => (x < 0 ? x + l : x) % l,
+    [items]
+  );
+  const getPos = useCallback(
+    (i, firstVis, firstVisIdx) => idx(i - firstVis + firstVisIdx),
+    [idx]
+  );
+  // Important only if specifyng width, centers the element in the slider
+  const offset = 0;
+  const [springs, set] = useSprings(items.length, (i) => ({
+    x: (i < items.length - 1 ? i : -1) * width + offset,
+  }));
+  const prev = useRef([0, 1]);
+  const index = useRef(0);
+  const [active, setActive] = useState(1);
+  const runSprings = useCallback(
+    (y, vy, down, xDir, cancel, xMove) => {
+      // This decides if we move over to the next slide or back to the initial
+      if (!down) {
+        index.current +=
+          ((-xMove + (width + xMove)) / width) * (xDir > 0 ? -1 : 1);
+        // cancel()
+      }
+      if (index.current + 1 > items.length) {
+        setActive((index.current % items.length) + 1);
+      } else if (index.current < 0) {
+        setActive(items.length + ((index.current + 1) % items.length));
+      } else {
+        setActive(index.current + 1);
+      }
+      // The actual scrolling value
+      const finalY = index.current * width;
+      // Defines currently visible slides
+      const firstVis = idx(Math.floor(finalY / width) % items.length);
+      const firstVisIdx = vy < 0 ? items.length - visible - 1 : 1;
+      set((i) => {
+        const position = getPos(i, firstVis, firstVisIdx);
+        const prevPosition = getPos(i, prev.current[0], prev.current[1]);
+        let rank =
+          firstVis -
+          (finalY < 0 ? items.length : 0) +
+          position -
+          firstVisIdx +
+          (finalY < 0 && firstVis === 0 ? items.length : 0);
+        return {
+          // x is the position of each of our slides
+          x:
+            (-finalY % (width * items.length)) +
+            width * rank +
+            (down ? xMove : 0) +
+            offset,
+          // this defines if the movement is immediate
+          // So when an item is moved from one end to the other we don't
+          // see it moving
+          immediate: vy < 0 ? prevPosition > position : prevPosition < position,
+        };
+      });
+      prev.current = [firstVis, firstVisIdx];
+    },
+    [idx, getPos, width, visible, set, items.length]
+  );
+
+  const buttons = (next: number) => {
+    index.current += next;
+    runSprings(0, next, true, -0, () => {}, -0);
+  };
+
+  return (
+    <>
+      {springs.map(({ x }, i) => (
+        // <a.div key={i} style={{ width, x }} children={items[i]} >
+        <a.div
+          key={i}
+          style={{
+            width,
+            x,
+            position: 'absolute',
+            height: '100%',
+            willChange: 'transform',
+          }}
+        >
+          <CarouselItem></CarouselItem>
+        </a.div>
+      ))}
+      {showButtons ? (
+        <>
+          <button
+            onClick={() => buttons(-1)}
+            className="focus:shadow-outline absolute top-0 left-0 mt-24 h-8 w-8 rounded-full bg-white text-2xl text-blue-600 shadow-md hover:text-blue-400 focus:text-blue-400 focus:outline-none"
+          >
+            <ArrowLeftIcon />
+          </button>
+          <button
+            onClick={() => buttons(1)}
+            className="focus:shadow-outline absolute top-0 right-0 mt-24 h-8 w-8 rounded-full bg-white text-2xl text-blue-600 shadow-md hover:text-blue-400 focus:text-blue-400 focus:outline-none"
+          >
+            <ArrowRightIcon />
+          </button>
+        </>
+      ) : null}
+      {/* {showCounter ? <InstaCounter currentIndex={active} data={items} /> : null} */}
+    </>
+  );
+};
+
+function InstaCounter({ currentIndex, data }) {
+  const dots = [];
+  for (const [index] of data.entries()) {
+    dots.push(<Dot key={index} active={currentIndex - 1 === index} />);
+  }
+  return (
+    <div>
+      <div
+        style={{
+          padding: '0.7rem 1rem',
+          color: '#fff',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        {dots}
+      </div>
+    </div>
+  );
+}
+
+function Dot({ active }) {
+  const { transform, opacity } = useSpring({
+    opacity: active ? 1 : 0.8,
+    transform: active ? `scale(1.5)` : `scale(1)`,
+    config: { mass: 5, tension: 500, friction: 80 },
+  });
+  return (
+    <a.div
+      style={{
+        opacity: opacity.to((o) => o),
+        transform,
+        borderRadius: '99px',
+        background: '#fff',
+        width: '5px',
+        height: '5px',
+        margin: '.3rem',
+        color: '#000',
+      }}
+    />
+  );
+}
