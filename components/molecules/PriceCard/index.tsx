@@ -4,7 +4,7 @@ import { CheckCircleIcon } from '@heroicons/react/solid';
 import { Button } from '../../atoms/Button';
 import { H2, H3, Paragraph } from '../../atoms/Typography';
 
-type Props = {
+export type Props = {
   title: React.ReactNode;
   description: React.ReactNode;
   price: string;

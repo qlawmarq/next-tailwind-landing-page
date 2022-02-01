@@ -4,7 +4,7 @@ import { animated, useSpring } from '@react-spring/web';
 import { Card } from '../../atoms/Card';
 import { Paragraph } from '../../atoms/Typography';
 
-type Props = {
+export type Props = {
   question: React.ReactNode;
   answer: React.ReactNode;
 };
