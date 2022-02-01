@@ -1,4 +1,4 @@
-import React, { useEffect,useRef, useCallback, useState, CSSProperties } from 'react';
+import React, { useEffect, useRef, useCallback, useState } from 'react';
 import { useSprings, a, useSpring } from '@react-spring/web';
 import { ArrowRightIcon, ArrowLeftIcon } from '@heroicons/react/solid';
 import { CarouselItem } from './CarouselItem';
@@ -6,23 +6,19 @@ import { CarouselItem } from './CarouselItem';
 type CarouselProps = {
   items: React.ReactNode[];
   width: number;
-  showButtons: boolean;
-  showCounter: boolean;
+  interval?: number;
+  showButtons?: boolean;
+  showCounter?: boolean;
 };
 
 export const Carousel: React.FC<CarouselProps> = ({
   items,
   width,
+  interval = 6000,
   showButtons = true,
   showCounter = true,
 }) => {
   const [visible, setVisible] = useState(items.length - 2);
-
-  if (items.length <= 2) {
-    alert(
-      "The slider doesn't handle two or less items very well, please use it with an array of at least 3 items in length"
-    );
-  }
 
   const idx = useCallback(
     (x, l = items.length) => (x < 0 ? x + l : x) % l,
@@ -87,10 +83,14 @@ export const Carousel: React.FC<CarouselProps> = ({
     [idx, getPos, width, visible, set, items.length]
   );
 
-  const buttons = (next: number) => {
+  const onClickButtons = (next: number) => {
     index.current += next;
     runSprings(0, next, true, -0, () => {}, -0);
   };
+
+  useEffect(() => {
+    setInterval(() => onClickButtons(1), interval);
+  }, []);
 
   return (
     <>
@@ -106,19 +106,19 @@ export const Carousel: React.FC<CarouselProps> = ({
             willChange: 'transform',
           }}
         >
-          <CarouselItem></CarouselItem>
+          <CarouselItem>{items[i]}</CarouselItem>
         </a.div>
       ))}
       {showButtons ? (
         <>
           <button
-            onClick={() => buttons(-1)}
+            onClick={() => onClickButtons(-1)}
             className="focus:shadow-outline absolute top-0 left-0 mt-24 h-8 w-8 rounded-full bg-white text-2xl text-blue-600 shadow-md hover:text-blue-400 focus:text-blue-400 focus:outline-none"
           >
             <ArrowLeftIcon />
           </button>
           <button
-            onClick={() => buttons(1)}
+            onClick={() => onClickButtons(1)}
             className="focus:shadow-outline absolute top-0 right-0 mt-24 h-8 w-8 rounded-full bg-white text-2xl text-blue-600 shadow-md hover:text-blue-400 focus:text-blue-400 focus:outline-none"
           >
             <ArrowRightIcon />

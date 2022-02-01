@@ -17,17 +17,22 @@ export const FAQ = () => {
             <Accordion
               className="mb-2"
               question="How to install it with windows server ?"
-              answer="I don't know..."
+              answer="Contact us"
+            />
+            <Accordion
+              className="mb-2"
+              question="How can I contact you ?"
+              answer="Lorem, ipsum dolor sit amet consectetur 
+                adipisicing elit.
+                Mollitia temporibus doloremque non eligendi unde ipsam?
+                Voluptatibus, suscipit deserunt quidem delectus perferendis
+                velit molestias, veritatis officia fugiat cumque quaerat
+                earum adipisci?"
             />
             <Accordion
               className="mb-2"
               question="How to use it with other integrations ?"
-              answer="I don't know..."
-            />
-            <Accordion
-              className="mb-2"
-              question="How to use it with other integrations ?"
-              answer="Lorem, ipsum dolor sit amet consectetur{' '}
+              answer="Lorem, ipsum dolor sit amet consectetur 
                 adipisicing elit.
                 Mollitia temporibus doloremque non eligendi unde ipsam?
                 Voluptatibus, suscipit deserunt quidem delectus perferendis
