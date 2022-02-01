@@ -12,7 +12,7 @@ export const CarouselContainer: React.FC<Props> = (props) => {
   const [width, setWidth] = useState(0);
 
   const measuredRef = useCallback((node) => {
-    if (node !== null) {
+    function updateSize() {
       const itemWidth = node.getBoundingClientRect().width;
       const windowWidth =
         window.innerWidth ||
@@ -21,6 +21,8 @@ export const CarouselContainer: React.FC<Props> = (props) => {
       const width = itemWidth === 'full' ? windowWidth : Math.ceil(itemWidth);
       setWidth(width);
     }
+    updateSize()
+    window.addEventListener('resize', updateSize);
   }, []);
 
   // useEffect(() => {
@@ -43,7 +45,7 @@ export const CarouselContainer: React.FC<Props> = (props) => {
             {props.children}
           </Carousel>
         ) : (
-          'null'
+          null
         )}
       </div>
     </>
