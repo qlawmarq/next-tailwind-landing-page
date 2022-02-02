@@ -4,7 +4,7 @@ export const Apple: React.FC<HTMLAttributes<HTMLButtonElement>> = (props) => {
   return (
     <button
       {...props}
-      className="mt-3 flex h-14 w-36 items-center justify-center rounded-xl bg-blue-900 text-white"
+      className="mt-3 flex h-14 w-36 items-center justify-center rounded-xl bg-primary-900 text-white"
     >
       <div className="mr-3">
         <svg viewBox="0 0 384 512" width="22">

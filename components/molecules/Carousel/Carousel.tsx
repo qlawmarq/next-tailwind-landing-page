@@ -115,13 +115,13 @@ export const Carousel: React.FC<CarouselProps> = ({
         <>
           <button
             onClick={() => onClickButtons(-1)}
-            className="focus:shadow-outline absolute top-0 left-0 mt-24 h-8 w-8 rounded-full bg-white text-2xl text-blue-600 shadow-md hover:text-blue-400 focus:text-blue-400 focus:outline-none"
+            className="focus:shadow-outline absolute top-0 left-0 mt-24 h-8 w-8 rounded-full bg-white text-2xl text-primary-600 shadow-md hover:text-primary-400 focus:text-primary-400 focus:outline-none"
           >
             <ArrowLeftIcon />
           </button>
           <button
             onClick={() => onClickButtons(1)}
-            className="focus:shadow-outline absolute top-0 right-0 mt-24 h-8 w-8 rounded-full bg-white text-2xl text-blue-600 shadow-md hover:text-blue-400 focus:text-blue-400 focus:outline-none"
+            className="focus:shadow-outline absolute top-0 right-0 mt-24 h-8 w-8 rounded-full bg-white text-2xl text-primary-600 shadow-md hover:text-primary-400 focus:text-primary-400 focus:outline-none"
           >
             <ArrowRightIcon />
           </button>

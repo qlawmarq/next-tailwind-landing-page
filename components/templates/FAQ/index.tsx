@@ -18,9 +18,10 @@ export const FAQ: React.FC<Props> = ({ qas }) => {
             <H5 className="my-2">Wondering how our service works ?</H5>
           </div>
           <div className="md:w-2/3">
-            {qas.map((qa) => {
+            {qas.map((qa, idx) => {
               return (
                 <Accordion
+                  key={idx}
                   className="mb-2"
                   question={qa.question}
                   answer={qa.answer}
