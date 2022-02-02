@@ -14,7 +14,7 @@ type CarouselProps = {
 export const Carousel: React.FC<CarouselProps> = ({
   items,
   width,
-  interval = 6000,
+  interval,
   showButtons = true,
   showCounter = true,
 }) => {
@@ -89,7 +89,9 @@ export const Carousel: React.FC<CarouselProps> = ({
   };
 
   useEffect(() => {
-    setInterval(() => onClickButtons(1), interval);
+    if(interval){
+      setInterval(() => onClickButtons(1), interval);
+    }
   }, []);
 
   return (
@@ -136,15 +138,9 @@ function InstaCounter({ currentIndex, data }) {
     dots.push(<Dot key={index} active={currentIndex - 1 === index} />);
   }
   return (
-    <div>
+    <div className='relative top-36'>
       <div
-        style={{
-          padding: '0.7rem 1rem',
-          color: '#fff',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
+        className='flex p-1 justify-center items-center'
       >
         {dots}
       </div>
@@ -164,11 +160,10 @@ function Dot({ active }) {
         opacity: opacity.to((o) => o),
         transform,
         borderRadius: '99px',
-        background: '#fff',
+        background: '#000',
         width: '5px',
         height: '5px',
         margin: '.3rem',
-        color: '#000',
       }}
     />
   );

@@ -5,7 +5,7 @@ import { Card } from '../../atoms/Card';
 
 export const CarouselItem: React.FC = ({ children }) => {
   return (
-    <Card className="relative mx-6 block items-center md:flex">
+    <Card className="relative mx-6 block items-center md:flex h-56">
       <div className="relative h-full w-full overflow-hidden rounded-t-lg md:rounded-t-none md:rounded-l-lg">
         <div className="h-44">
           {/* <Image

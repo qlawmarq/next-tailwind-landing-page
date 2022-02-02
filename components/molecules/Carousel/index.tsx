@@ -27,7 +27,7 @@ export const CarouselContainer: React.FC<Props> = (props) => {
 
   return (
     <>
-      <div ref={measuredRef} className="relative h-56 overflow-hidden">
+      <div ref={measuredRef} className="relative h-60 overflow-hidden">
         {width !== 0 ? <Carousel {...props} width={width} /> : null}
       </div>
     </>

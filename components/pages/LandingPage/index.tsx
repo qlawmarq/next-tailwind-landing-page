@@ -17,11 +17,13 @@ export const LandingPage = () => {
       <main className="font-montserrat bg-gray-100">
         <Header />
         <CTA
-          title="Business Landing Page"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing adipiselit.
-            Pellentesque suscipit tellus vitae purus dignissim, nec tincidunt
-            neque condimentum. Nam nec ligula pretium mi interdum hendrerit in
-            sit."
+          title="Excellent Landing Page Template"
+          description="This is an excellent template for landing page and can strongly support you to compose your landing page quickly."
+        />
+        <CTA
+          title="Support for All Situations"
+          description="When constructing any landing page, it is easy to change the theme color and other elements to easily build what you need."
+          isImageRight
         />
         <Carousel
           items={[

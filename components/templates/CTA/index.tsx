@@ -9,6 +9,7 @@ type Props = {
   description: string;
   image?: StaticImageData | string;
   onClickStart?: () => void;
+  isImageRight?: boolean;
 };
 
 export const CTA: React.FC<Props> = ({
@@ -16,19 +17,36 @@ export const CTA: React.FC<Props> = ({
   description,
   image = analyzeData,
   onClickStart,
+  isImageRight = false,
 }) => {
   return (
     <Container>
-      <div className="relative mx-auto flex w-full flex-col py-6 sm:flex-row">
-        <div className="relative sm:w-6/12">
-          <Image className="" src={image} alt="" />
+      
+        {!isImageRight && 
+        <div className="relative mx-auto flex w-full flex-col py-6 sm:flex-row">
+          <div className="relative sm:w-6/12">
+            <Image className="" src={image} alt="" />
+          </div>
+          <div className="relative ml-auto mt-8 mb-16 flex flex-col items-start sm:mt-0 sm:mb-0 sm:w-5/12 sm:items-end sm:text-right xl:w-4/12 xl:pt-20">
+            <H1 className="mb-4">{title}</H1>
+            <H5 className="mb-4 sm:mb-12">{description}</H5>
+            <Button onClick={onClickStart}>Start</Button>
+          </div>
         </div>
-        <div className="relative ml-auto mt-8 mb-16 flex flex-col items-start sm:mt-0 sm:mb-0 sm:w-5/12 sm:items-end sm:text-right xl:w-4/12 xl:pt-20">
-          <H1 className="mb-4">{title}</H1>
-          <H5 className="mb-4 sm:mb-12">{description}</H5>
-          <Button onClick={onClickStart}>Start</Button>
+        }
+
+        {isImageRight && 
+        <div className="relative mx-auto flex w-full flex-col-reverse py-6 sm:flex-row">
+          <div className="relative ml-auto mt-8 mb-16 flex flex-col items-start sm:mt-0 sm:mb-0 sm:w-5/12 sm:items-end sm:text-left xl:w-4/12 xl:pt-20">
+            <H1 className="mb-4">{title}</H1>
+            <H5 className="mb-4 sm:mb-12">{description}</H5>
+            <Button onClick={onClickStart}>Start</Button>
+          </div>
+          <div className="relative sm:w-6/12">
+            <Image className="" src={image} alt="" />
+          </div>
         </div>
-      </div>
+        }
     </Container>
   );
 };
