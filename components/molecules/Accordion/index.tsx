@@ -32,7 +32,7 @@ export const Accordion: React.FC<Props & HTMLAttributes<HTMLElement>> = ({
           <Paragraph>{question}</Paragraph>
         </div>
         <div className="px-2">
-          <div className='text-primary-600'>
+          <div className="text-primary-600">
             {isOpen ? (
               <ChevronDownIcon className="h-6 w-6" />
             ) : (

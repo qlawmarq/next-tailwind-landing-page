@@ -27,6 +27,11 @@ export const Footer = () => {
                     <Link href="/privacy-policy">Privacy Policy</Link>
                   </Paragraph>
                 </li>
+                <li>
+                  <Paragraph className="flex cursor-pointer pb-2 hover:text-primary-500">
+                    <Link href="/terms-conditions">Terms and Conditions</Link>
+                  </Paragraph>
+                </li>
               </ul>
             </div>
             <div className="flex flex-col">
