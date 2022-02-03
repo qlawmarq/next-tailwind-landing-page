@@ -5,7 +5,7 @@ type Props = {
   priceProps: PriceCardProps[];
 };
 
-export const Prices: React.FC<Props> = ({priceProps}) => {
+export const Prices: React.FC<Props> = ({ priceProps }) => {
   return (
     <Container>
       <div className="relative mx-auto flex w-full flex-col py-6 sm:flex-row">
@@ -19,7 +19,7 @@ export const Prices: React.FC<Props> = ({priceProps}) => {
                 price={priceProp.price}
                 features={priceProp.features}
               />
-            )
+            );
           })}
         </div>
       </div>

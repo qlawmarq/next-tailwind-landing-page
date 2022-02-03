@@ -14,7 +14,7 @@ export const LandingPage = () => {
         <title>Business Landing Page</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="font-montserrat bg-gray-100">
+      <main className="font-montserrat">
         <Header />
         <CTA
           title="Excellent Landing Page Template"

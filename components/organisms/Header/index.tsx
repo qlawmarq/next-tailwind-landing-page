@@ -1,6 +1,8 @@
 import React, { useState, HTMLAttributes } from 'react';
 import { animated, useSpring } from '@react-spring/web';
 import { Container } from '../../atoms/Container';
+import Link from 'next/link';
+import { Paragraph } from '../../atoms/Typography';
 
 export const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -51,28 +53,18 @@ export const Header: React.FC = () => {
           </div>
           <animated.nav
             style={navStyle}
-            className="fixed top-0 z-10 flex h-full flex-col bg-white p-6 text-lg text-primary-900"
+            className="fixed top-0 z-10 flex h-full flex-col bg-primary-50 p-6 text-lg text-primary-900"
           >
             <ul className="mt-24 flex flex-col">
               <li>
-                <a href="#" className="flex py-2 px-8 hover:text-primary-700">
-                  Home
-                </a>
+                <Paragraph className="flex cursor-pointer py-2 px-8 hover:text-primary-500">
+                  <Link href="/">Home</Link>
+                </Paragraph>
               </li>
               <li>
-                <a href="#" className="flex py-2 px-8 hover:text-primary-700">
-                  Service
-                </a>
-              </li>
-              <li>
-                <a href="#" className="flex py-2 px-8 hover:text-primary-700">
-                  Portfolio
-                </a>
-              </li>
-              <li>
-                <a href="#" className="flex py-2 px-8 hover:text-primary-700">
-                  Contact us
-                </a>
+                <Paragraph className="flex cursor-pointer py-2 px-8 hover:text-primary-500">
+                  <Link href="/privacy-policy">Privacy Policy</Link>
+                </Paragraph>
               </li>
             </ul>
           </animated.nav>

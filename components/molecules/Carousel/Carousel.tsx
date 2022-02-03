@@ -89,7 +89,7 @@ export const Carousel: React.FC<CarouselProps> = ({
   };
 
   useEffect(() => {
-    if(interval){
+    if (interval) {
       setInterval(() => onClickButtons(1), interval);
     }
   }, []);
@@ -138,12 +138,8 @@ function InstaCounter({ currentIndex, data }) {
     dots.push(<Dot key={index} active={currentIndex - 1 === index} />);
   }
   return (
-    <div className='relative top-36'>
-      <div
-        className='flex p-1 justify-center items-center'
-      >
-        {dots}
-      </div>
+    <div className="relative top-36">
+      <div className="flex items-center justify-center p-1">{dots}</div>
     </div>
   );
 }
