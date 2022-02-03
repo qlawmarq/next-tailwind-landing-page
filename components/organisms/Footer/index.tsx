@@ -4,6 +4,7 @@ import { Apple, Google } from '../../atoms/AppStoreButton';
 import TwitterIcon from 'mdi-react/TwitterIcon';
 import YoutubeIcon from 'mdi-react/YoutubeIcon';
 import InstagramIcon from 'mdi-react/InstagramIcon';
+import Link from 'next/link';
 
 export const Footer = () => {
   return (
@@ -12,15 +13,19 @@ export const Footer = () => {
         <div className="relative m-auto flex w-full flex-col">
           <div className="flex flex-row justify-between">
             <div>
-              <Paragraph className="text-xs font-medium uppercase text-gray-500">
+              <Paragraph className="pb-3 text-xs font-medium uppercase text-gray-500">
                 Services
               </Paragraph>
               <ul>
                 <li>
-                  <Paragraph className="my-3 block">About Us</Paragraph>
+                  <Paragraph className="flex cursor-pointer pb-2 hover:text-primary-500">
+                    <Link href="/">Home</Link>
+                  </Paragraph>
                 </li>
                 <li>
-                  <Paragraph className="my-3 block">Support</Paragraph>
+                  <Paragraph className="flex cursor-pointer pb-2 hover:text-primary-500">
+                    <Link href="/privacy-policy">Privacy Policy</Link>
+                  </Paragraph>
                 </li>
               </ul>
             </div>
