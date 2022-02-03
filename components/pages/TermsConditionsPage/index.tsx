@@ -7,7 +7,7 @@ export const TermsConditionsPage = () => {
   return (
     <>
       <Head>
-        <title>Privacy Policy</title>
+        <title>Terms and Conditions</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="font-montserrat">
