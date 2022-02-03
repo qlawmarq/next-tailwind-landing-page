@@ -38,35 +38,20 @@ export const TermsConditions = () => {
         <div className="mb-3">
           <H2 className="mb-3">License</H2>
           <Paragraph className="mb-2">
-            Unless otherwise stated, Our services and/or its licensors own the
+            Unless otherwise stated, We and/or its licensors own the
             intellectual property rights for all material on Our services. All
             intellectual property rights are reserved. You may access this from
             Our services for your own personal use subjected to restrictions set
             in these terms and conditions.
           </Paragraph>
-          <Paragraph className="mb-2">You must not:</Paragraph>
-          <ul>
-            <li>
-              <Paragraph className="mb-2">
-                Republish material from Our services
-              </Paragraph>
-            </li>
-            <li>
-              <Paragraph className="mb-2">
-                Sell, rent or sub-license material from Our services
-              </Paragraph>
-            </li>
-            <li>
-              <Paragraph className="mb-2">
-                Reproduce, duplicate or copy material from our Services
-              </Paragraph>
-            </li>
-            <li>
-              <Paragraph className="mb-2">
-                Redistribute content from Our services
-              </Paragraph>
-            </li>
-          </ul>
+          <Paragraph className="mb-2">
+            Except as expressly provided in this Agreement, you are prohibited
+            from copying, reproducing, modifying, distributing, displaying,
+            performing, or transmitting the Content of the Service for any
+            purpose, and nothing contained in or implied by the Service grants
+            you any license or right to do so.
+          </Paragraph>
+
           <Paragraph className="mb-2">
             Parts of Our services offer an opportunity for users to post and
             exchange opinions and information. Our services does not filter,

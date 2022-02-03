@@ -36,9 +36,12 @@ export const PrivacyPolicy = () => {
 
           <Paragraph className="mb-2">
             For a better experience while using our Service, we may require you
-            to provide us with certain personally identifiable information. The
-            information we collect may be used to communicate with you or to
-            identify you personally.
+            to provide us with certain personally identifiable information as
+            defined in Log Data.
+          </Paragraph>
+          <Paragraph className="mb-2">
+            The information we collect may be used to identify you personally,
+            to the extent that such use is restricted by law.
           </Paragraph>
         </div>
 
@@ -69,19 +72,6 @@ export const PrivacyPolicy = () => {
             creating a unique, secure, and protected password and limiting
             access to your device and browser by signing off after you have
             finished accessing the Services.
-          </Paragraph>
-        </div>
-
-        <div className="mb-3">
-          <H2 className="mb-3">Links to Other Sites</H2>
-
-          <Paragraph className="mb-2">
-            Our Service may contain links to other sites. If you click on a
-            third-party link, you will be directed to that site. Note that these
-            external sites are not operated by us. Therefore, we strongly advise
-            you to review the Privacy Policy of these websites. We have no
-            control over, and assume no responsibility for the content, privacy
-            policies, or practices of any third-party sites or services.
           </Paragraph>
         </div>
 
