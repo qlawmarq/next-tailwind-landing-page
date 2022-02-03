@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { Container } from '../../atoms/Container';
 import { Paragraph } from '../../atoms/Typography';
 import { Apple, Google } from '../../atoms/AppStoreButton';
@@ -7,6 +8,7 @@ import InstagramIcon from 'mdi-react/InstagramIcon';
 import Link from 'next/link';
 
 export const Footer = () => {
+  const [thisYear] = useState(new Date().getFullYear());
   return (
     <footer className="pt-12 pb-6">
       <Container>
@@ -27,6 +29,11 @@ export const Footer = () => {
                     <Link href="/privacy-policy">Privacy Policy</Link>
                   </Paragraph>
                 </li>
+                <li>
+                  <Paragraph className="flex cursor-pointer pb-2 hover:text-primary-500">
+                    <Link href="/terms-conditions">Terms and Conditions</Link>
+                  </Paragraph>
+                </li>
               </ul>
             </div>
             <div className="flex flex-col">
@@ -37,7 +44,9 @@ export const Footer = () => {
 
           <div className="mt-6 flex flex-row justify-between">
             <div>
-              <Paragraph>© Copyright 2020. All Rights Reserved.</Paragraph>
+              <Paragraph>
+                © Copyright {thisYear}. All Rights Reserved.
+              </Paragraph>
             </div>
             <div className="flex">
               <TwitterIcon color="#1e3a8a" />

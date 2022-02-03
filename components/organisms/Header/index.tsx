@@ -66,6 +66,11 @@ export const Header: React.FC = () => {
                   <Link href="/privacy-policy">Privacy Policy</Link>
                 </Paragraph>
               </li>
+              <li>
+                <Paragraph className="flex cursor-pointer py-2 px-8 hover:text-primary-500">
+                  <Link href="/terms-conditions">Terms and Conditions</Link>
+                </Paragraph>
+              </li>
             </ul>
           </animated.nav>
         </Container>

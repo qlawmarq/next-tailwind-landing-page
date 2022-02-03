@@ -12,14 +12,9 @@ export const PrivacyPolicy = () => {
           <H1 className="mb-6">Privacy Policy</H1>
 
           <Paragraph className="mb-2">
-            Tailwind Landing Page Next operates the http://localhost:3000/
-            website, which provides the SERVICE.
-          </Paragraph>
-          <Paragraph className="mb-2">
             This page is used to inform website visitors regarding our policies
             with the collection, use, and disclosure of Personal Information if
-            anyone decided to use our Service, the Tailwind Landing Page Next
-            website.
+            anyone decided to use our Service.
           </Paragraph>
           <Paragraph className="mb-2">
             If you choose to use our Service, then you agree to the collection
@@ -31,9 +26,8 @@ export const PrivacyPolicy = () => {
 
           <Paragraph className="mb-2">
             The terms used in this Privacy Policy have the same meanings as in
-            our Terms and Conditions, which is accessible at
-            http://localhost:3000/, unless otherwise defined in this Privacy
-            Policy.
+            our Terms and Conditions, unless otherwise defined in this Privacy
+            Policy. Please also refer to our Terms of Conditions.
           </Paragraph>
         </div>
 
@@ -42,10 +36,12 @@ export const PrivacyPolicy = () => {
 
           <Paragraph className="mb-2">
             For a better experience while using our Service, we may require you
-            to provide us with certain personally identifiable information,
-            including but not limited to your name, phone number, and postal
-            address. The information that we collect will be used to contact or
-            identify you.
+            to provide us with certain personally identifiable information as
+            defined in Log Data.
+          </Paragraph>
+          <Paragraph className="mb-2">
+            The information we collect may be used to identify you personally,
+            to the extent that such use is restricted by law.
           </Paragraph>
         </div>
 
@@ -54,62 +50,10 @@ export const PrivacyPolicy = () => {
 
           <Paragraph className="mb-2">
             We want to inform you that whenever you visit our Service, we
-            collect information that your browser sends to us that is called Log
-            Data. This Log Data may include information such as your computer’s
-            Internet Protocol ("IP") address, browser version, pages of our
-            Service that you visit, the time and date of your visit, the time
-            spent on those pages, and other statistics.
-          </Paragraph>
-        </div>
-
-        <div className="mb-3">
-          <H2 className="mb-3">Cookies</H2>
-
-          <Paragraph className="mb-2">
-            Cookies are files with small amount of data that is commonly used an
-            anonymous unique identifier. These are sent to your browser from the
-            website that you visit and are stored on your computer’s hard drive.
-          </Paragraph>
-
-          <Paragraph className="mb-2">
-            Our website uses these "cookies" to collection information and to
-            improve our Service. You have the option to either accept or refuse
-            these cookies, and know when a cookie is being sent to your
-            computer. If you choose to refuse our cookies, you may not be able
-            to use some portions of our Service.
-          </Paragraph>
-        </div>
-
-        <div className="mb-3">
-          <H2 className="mb-3">Service Providers</H2>
-
-          <Paragraph className="mb-2">
-            We may employ third-party companies and individuals due to the
-            following reasons:
-          </Paragraph>
-
-          <ul className="mb-2">
-            <li>
-              <Paragraph>- To facilitate our Service;</Paragraph>
-            </li>
-            <li>
-              <Paragraph>- To provide the Service on our behalf;</Paragraph>
-            </li>
-            <li>
-              <Paragraph>- To perform Service-related services; or</Paragraph>
-            </li>
-            <li>
-              <Paragraph>
-                - To assist us in analyzing how our Service is used.
-              </Paragraph>
-            </li>
-          </ul>
-
-          <Paragraph className="mb-2">
-            We want to inform our Service users that these third parties have
-            access to your Personal Information. The reason is to perform the
-            tasks assigned to them on our behalf. However, they are obligated
-            not to disclose or use the information for any other purpose.
+            collect information that your device sends to us that is called Log
+            Data. This Log Data may include information such as your device’s
+            Internet Protocol ("IP") address, device version, the time and date
+            of your visit, and other statistics.
           </Paragraph>
         </div>
 
@@ -123,18 +67,11 @@ export const PrivacyPolicy = () => {
             or method of electronic storage is 100% secure and reliable, and we
             cannot guarantee its absolute security.
           </Paragraph>
-        </div>
-
-        <div className="mb-3">
-          <H2 className="mb-3">Links to Other Sites</H2>
-
           <Paragraph className="mb-2">
-            Our Service may contain links to other sites. If you click on a
-            third-party link, you will be directed to that site. Note that these
-            external sites are not operated by us. Therefore, we strongly advise
-            you to review the Privacy Policy of these websites. We have no
-            control over, and assume no responsibility for the content, privacy
-            policies, or practices of any third-party sites or services.
+            You need to prevent unauthorized access to your information by
+            creating a unique, secure, and protected password and limiting
+            access to your device and browser by signing off after you have
+            finished accessing the Services.
           </Paragraph>
         </div>
 
