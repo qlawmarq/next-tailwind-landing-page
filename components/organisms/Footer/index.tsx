@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container } from '../../atoms/Container';
 import { Paragraph } from '../../atoms/Typography';
-import { Apple, Google } from '../../atoms/AppStoreButton';
+import { Apple, Google } from '../../molecules/AppStoreButton';
 import TwitterIcon from 'mdi-react/TwitterIcon';
 import YoutubeIcon from 'mdi-react/YoutubeIcon';
 import InstagramIcon from 'mdi-react/InstagramIcon';
