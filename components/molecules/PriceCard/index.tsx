@@ -9,6 +9,7 @@ export type Props = {
   description: React.ReactNode;
   price: string;
   features: string[];
+  onClickButton: ()=>void;
 };
 
 export const PriceCard: React.FC<Props> = (props) => {
@@ -37,7 +38,7 @@ export const PriceCard: React.FC<Props> = (props) => {
         })}
       </ul>
       <div className="flex flex-col pt-4">
-        <Button className="w-full">Start</Button>
+        <Button onClick={props.onClickButton} className="w-full">Start</Button>
       </div>
     </Card>
   );

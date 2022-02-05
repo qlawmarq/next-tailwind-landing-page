@@ -8,7 +8,7 @@ type Props = {
   title: string;
   description: string;
   image?: StaticImageData | string;
-  onClickStart?: () => void;
+  onClickStart: () => void;
   isImageRight?: boolean;
 };
 
@@ -36,7 +36,7 @@ export const CTA: React.FC<Props> = ({
 
       {isImageRight && (
         <div className="relative mx-auto flex w-full flex-col-reverse py-6 sm:flex-row">
-          <div className="relative mr-auto mt-8 mb-16 flex flex-col items-start sm:mt-0 sm:mb-0 sm:w-5/12 sm:items-end sm:text-left xl:w-4/12 xl:pt-20">
+          <div className="relative mr-auto mt-8 mb-16 flex flex-col items-start sm:mt-0 sm:mb-0 sm:w-5/12 sm:items-start sm:text-left xl:w-4/12 xl:pt-20">
             <H1 className="mb-4">{title}</H1>
             <H5 className="mb-4 sm:mb-12">{description}</H5>
             <Button onClick={onClickStart}>Start</Button>

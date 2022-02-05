@@ -19,11 +19,13 @@ export const LandingPage = () => {
         <CTA
           title="Excellent Landing Page Template"
           description="This is an excellent template for landing page and can strongly support you to compose your landing page quickly."
+          onClickStart={()=>console.log('click')}
         />
         <CTA
           title="Support for All Situations"
           description="When constructing any landing page, it is easy to change the theme color and other elements to easily build what you need."
           isImageRight
+          onClickStart={()=>console.log('click')}
         />
         <Carousel
           items={[
@@ -33,6 +35,8 @@ export const LandingPage = () => {
           ]}
         />
         <FAQ
+          title='Frequently Asked Questions'
+          description='Wondering how our service works?'
           qas={[
             {
               question: 'How can I install?',
@@ -54,6 +58,7 @@ export const LandingPage = () => {
                 'Perfect for using in a personal website or a client project.',
               price: 'Free',
               features: ['One User', 'One Project'],
+              onClickButton: ()=>console.log('click')
             },
             {
               title: 'Basic',
@@ -61,6 +66,7 @@ export const LandingPage = () => {
                 'Perfect for using in a business website or a client project.',
               price: '$6',
               features: ['Twelve User', 'Twelve Project', 'Online Support'],
+              onClickButton: ()=>console.log('click')
             },
             {
               title: 'Pro',
@@ -73,6 +79,7 @@ export const LandingPage = () => {
                 'Unlimited Access',
                 'Online & Offline Support',
               ],
+              onClickButton: ()=>console.log('click')
             },
           ]}
         />

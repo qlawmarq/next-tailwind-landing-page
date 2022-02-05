@@ -8,7 +8,7 @@ export const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const navStyle = useSpring({
     opacity: isOpen ? 0.9 : 0,
-    right: isOpen ? 0 : -200,
+    right: isOpen ? 0 : -270,
   });
   const hamburgerStyle2 = useSpring({
     opacity: isOpen ? 0 : 1,
