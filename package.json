@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@heroicons/react": "1.0.5",
-    "@react-spring/web": "9.4.2",
+    "@react-spring/web": "9.4.3",
     "mdi-react": "8.2.0",
     "next": "latest",
     "react": "17.0.2",
