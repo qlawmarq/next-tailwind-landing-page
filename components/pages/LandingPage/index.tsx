@@ -5,81 +5,69 @@ import { CTA } from '../../templates/CTA';
 import { FAQ } from '../../templates/FAQ';
 import { Prices } from '../../templates/Prices';
 import { Carousel } from '../../templates/Carousel';
-import { H1, H5 } from '../../atoms/Typography';
+import { H1 } from '../../atoms/Typography';
+import { useLocale } from '../../../hooks/useLocale';
 
 export const LandingPage = () => {
+  const { t } = useLocale();
   return (
     <>
       <Head>
-        <title>Business Landing Page</title>
+        <title>{t.LandingPage.first_title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="font-montserrat">
         <Header />
         <CTA
-          title="Excellent Landing Page Template"
-          description="This is an excellent template for landing page and can strongly support you to compose your landing page quickly."
-          onClickStart={()=>console.log('click')}
+          title={t.LandingPage.first_title}
+          description={t.LandingPage.first_description}
+          onClickStart={() => console.log('click')}
         />
         <CTA
-          title="Support for All Situations"
-          description="When constructing any landing page, it is easy to change the theme color and other elements to easily build what you need."
+          title={t.LandingPage.second_title}
+          description={t.LandingPage.second_description}
           isImageRight
-          onClickStart={()=>console.log('click')}
+          onClickStart={() => console.log('click')}
         />
         <Carousel
           items={[
-            <H1>All in one app</H1>,
-            <H1>Safety and Secure</H1>,
-            <H1>Help your Business</H1>,
+            <H1>{t.LandingPage.carousel_1}</H1>,
+            <H1>{t.LandingPage.carousel_2}</H1>,
+            <H1>{t.LandingPage.carousel_3}</H1>,
           ]}
         />
         <FAQ
-          title='Frequently Asked Questions'
-          description='Wondering how our service works?'
+          title={t.LandingPage.faq_title}
+          description={t.LandingPage.faq_description}
           qas={[
             {
-              question: 'How can I install?',
-              answer:
-                'Please visit the github page, you will find instructions',
+              question: t.LandingPage.question_1,
+              answer: t.LandingPage.question_1,
             },
             {
-              question: 'How can I test this text?',
-              answer:
-                'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia temporibus doloremque non eligendi unde ipsam? Voluptatibus, suscipit deserunt quidem delectus perferendis velit molestias, veritatis officia fugiat cumque quaerat earum adipisci?',
+              question: t.LandingPage.question_2,
+              answer: t.LandingPage.question_2,
             },
           ]}
         />
         <Prices
           priceProps={[
             {
-              title: 'Free',
-              description:
-                'Perfect for using in a personal website or a client project.',
-              price: 'Free',
-              features: ['One User', 'One Project'],
-              onClickButton: ()=>console.log('click')
+              title: t.LandingPage.price_title_1,
+              description: t.LandingPage.price_description_1,
+              price: t.LandingPage.price_amount_1,
+              features: [t.LandingPage.price_features_1_1],
+              onClickButton: () => console.log('click'),
             },
             {
-              title: 'Basic',
-              description:
-                'Perfect for using in a business website or a client project.',
-              price: '$6',
-              features: ['Twelve User', 'Twelve Project', 'Online Support'],
-              onClickButton: ()=>console.log('click')
-            },
-            {
-              title: 'Pro',
-              description:
-                'Perfect for using in a professional website or a large-scale project.',
-              price: '$24',
+              title: t.LandingPage.price_title_2,
+              description: t.LandingPage.price_description_2,
+              price: t.LandingPage.price_amount_2,
               features: [
-                'Unlimited User',
-                'Unlimited Project',
-                'Unlimited Access',
-                'Online & Offline Support',
+                t.LandingPage.price_features_2_1,
+                t.LandingPage.price_features_2_2,
               ],
-              onClickButton: ()=>console.log('click')
+              onClickButton: () => console.log('click'),
             },
           ]}
         />
