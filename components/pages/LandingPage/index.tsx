@@ -31,9 +31,9 @@ export const LandingPage = () => {
         />
         <Carousel
           items={[
-            <H1>{t.LandingPage.carousel_1}</H1>,
-            <H1>{t.LandingPage.carousel_2}</H1>,
-            <H1>{t.LandingPage.carousel_3}</H1>,
+            <H1 className='text-center'>{t.LandingPage.carousel_1}</H1>,
+            <H1 className='text-center'>{t.LandingPage.carousel_2}</H1>,
+            <H1 className='text-center'>{t.LandingPage.carousel_3}</H1>,
           ]}
         />
         <FAQ
