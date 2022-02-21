@@ -132,35 +132,34 @@ export const Carousel: React.FC<CarouselProps> = ({
   );
 };
 
-function InstaCounter({ currentIndex, data }) {
-  const dots = [];
-  for (const [index] of data.entries()) {
-    dots.push(<Dot key={index} active={currentIndex - 1 === index} />);
-  }
-  return (
-    <div className="relative top-36">
-      <div className="flex items-center justify-center p-1">{dots}</div>
-    </div>
-  );
-}
-
-function Dot({ active }) {
-  const { transform, opacity } = useSpring({
-    opacity: active ? 1 : 0.8,
-    transform: active ? `scale(1.5)` : `scale(1)`,
-    config: { mass: 5, tension: 500, friction: 80 },
-  });
-  return (
-    <a.div
-      style={{
-        opacity: opacity.to((o) => o),
-        transform,
-        borderRadius: '99px',
-        background: '#000',
-        width: '5px',
-        height: '5px',
-        margin: '.3rem',
-      }}
-    />
-  );
-}
+// function InstaCounter({ currentIndex, data }) {
+//   const dots = [];
+//   for (const [index] of data.entries()) {
+//     dots.push(<Dot key={index} active={currentIndex - 1 === index} />);
+//   }
+//   return (
+//     <div className="relative top-36">
+//       <div className="flex items-center justify-center p-1">{dots}</div>
+//     </div>
+//   );
+// }
+// function Dot({ active }) {
+//   const { transform, opacity } = useSpring({
+//     opacity: active ? 1 : 0.8,
+//     transform: active ? `scale(1.5)` : `scale(1)`,
+//     config: { mass: 5, tension: 500, friction: 80 },
+//   });
+//   return (
+//     <a.div
+//       style={{
+//         opacity: opacity.to((o) => o),
+//         transform,
+//         borderRadius: '99px',
+//         background: '#000',
+//         width: '5px',
+//         height: '5px',
+//         margin: '.3rem',
+//       }}
+//     />
+//   );
+// }
