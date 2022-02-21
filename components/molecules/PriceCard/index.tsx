@@ -9,7 +9,7 @@ export type Props = {
   description: React.ReactNode;
   price: string;
   features: string[];
-  onClickButton: ()=>void;
+  onClickButton: () => void;
 };
 
 export const PriceCard: React.FC<Props> = (props) => {
@@ -23,7 +23,6 @@ export const PriceCard: React.FC<Props> = (props) => {
       </div>
       <div className="flex flex-row items-center">
         <H3 className="font-medium tracking-tight">{props.price}</H3>
-        <Paragraph className="ml-2 text-gray-400">/month</Paragraph>
       </div>
       <ul className="flex-1 space-y-4">
         {props.features.map((feature, idx) => {
@@ -38,7 +37,9 @@ export const PriceCard: React.FC<Props> = (props) => {
         })}
       </ul>
       <div className="flex flex-col pt-4">
-        <Button onClick={props.onClickButton} className="w-full">Start</Button>
+        <Button onClick={props.onClickButton} className="w-full">
+          Start
+        </Button>
       </div>
     </Card>
   );

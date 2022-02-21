@@ -1,6 +1,9 @@
 {
   "name": "tailwind-landing-page-next",
   "private": true,
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
     "dev": "next dev & tailwind-config-viewer -o -p 4000",
     "build": "next build",
