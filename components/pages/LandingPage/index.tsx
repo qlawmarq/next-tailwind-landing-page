@@ -1,4 +1,7 @@
+import React, { useState } from 'react';
 import Head from 'next/head';
+import { Modal } from '../../molecules/Modal';
+
 import { Header } from '../../organisms/Header';
 import { Footer } from '../../organisms/Footer';
 import { CTA } from '../../templates/CTA';
@@ -9,6 +12,7 @@ import { H1 } from '../../atoms/Typography';
 import { useLocale } from '../../../hooks/useLocale';
 
 export const LandingPage = () => {
+  const [isOpen, setIsOpen] = useState(false)
   const { t } = useLocale();
   return (
     <>
@@ -17,11 +21,12 @@ export const LandingPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="font-montserrat">
+        <Modal isOpen={isOpen} onClose={()=>setIsOpen(!isOpen)} >TESTETSTETSTE</Modal>
         <Header />
         <CTA
           title={t.LandingPage.first_title}
           description={t.LandingPage.first_description}
-          onClickStart={() => console.log('click')}
+          onClickStart={() => setIsOpen(!isOpen)}
         />
         <CTA
           title={t.LandingPage.second_title}
