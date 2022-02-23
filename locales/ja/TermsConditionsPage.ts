@@ -1,29 +1,29 @@
 export default {
-  section_1_title: 'Terms and Conditions',
+  section_1_title: '利用規約',
   section_1_content_1:
-    'By accessing this website or using any of the services we provide, we will assume that you agree to these terms and conditions.',
+    '本ウェブサイトにアクセスし、当社が提供するサービスを利用された場合、当社はお客様がこれらの条件に同意されたものとみなします。',
   section_1_content_2:
-    'If you do not agree to all of the terms and conditions stated on this page, please do not continue to use our services.',
-  section_2_title: 'Service Changes and Limitations',
+    'このページに記載されているすべての条件に同意されない場合は、当社サービスのご利用を継続されないようお願いいたします。',
+  section_2_title: 'サービスの変更と制限',
   section_2_content_1:
-    'The Services we provide change frequently, and their form and functionality may change without prior notice to you. We retains the right to create limits on and related to use of Our Services in its sole discretion at any time with or without notice. We may also impose limits on certain Services or aspects of those Services or restrict your access to parts or all of the Services without notice or liability. We may change, suspend, or discontinue any or all of Our Services at any time, including the availability of any product, feature, database, or any content.',
-  section_3_title: 'License',
+    '当社が提供する本サービスは頻繁に変更され、その形態や機能はお客様に事前に通知することなく変更されることがあります。当社は、独自の判断により、通知の有無にかかわらず、いつでも当社サービスの使用に関する制限を設ける権利を留保します。また、当社は、通知することなく、また責任を負うことなく、サービスに制限を課し、またはサービスの一部または全部へのお客様のアクセスを制限することができるものとします。当社は、製品、機能、データベース、またはコンテンツの利用可能性を含め、当社のサービスの一部または全部をいつでも変更、停止、または中止することができます。',
+  section_3_title: 'ライセンス',
   section_3_content_1:
-    'Unless otherwise stated, We and/or its licensors own the intellectual property rights for all material on Our services. All intellectual property rights are reserved. You may access this from Our services for your own personal use subjected to restrictions set in these terms and conditions.',
+    '別段の定めがない限り、当社および/またはそのライセンサーは、当社のサービス上のすべての素材に関する知的財産権を所有しています。すべての知的財産権は留保されています。お客様は、本規約に定められた制限のもとで、非営利目的での個人使用のために当社のサービスからこれにアクセスすることができます。',
   section_3_content_2:
-    'Except as expressly provided in this Agreement, you are prohibited from copying, reproducing, modifying, distributing, displaying, performing, or transmitting the Content of the Service for any purpose, and nothing contained in or implied by the Service grants you any license or right to do so.',
+    '本契約で明示的に規定されている場合を除き、お客様は、いかなる目的であれ、本サービスのコンテンツをコピー、複製、修正、配布、表示、実行、または送信することを禁じられており、本サービスに含まれまたは暗示されるものは、お客様にそのためのいかなるライセンスまたは権利も付与するものではありません。',
   section_3_content_3:
-    'Parts of Our services offer an opportunity for users to post and exchange opinions and information. Our services does not filter, edit, publish or review Comments prior to their presence on any place. Comments do not reflect the views and opinions of Ours, its agents and/or affiliates. Comments reflect the views and opinions of the person who post their views and opinions. To the extent permitted by applicable laws, Our services shall not be liable for the Comments or for any liability, damages or expenses caused and/or suffered as a result of any use of and/or posting of and/or appearance of the Comments.',
-  section_4_title: 'Warranty Disclaimer',
+    '当社のサービスの一部は、ユーザーが意見や情報を投稿し、交換する機会を提供しています。当社のサービスは、いかなる場所にも存在する前に、コメントをフィルタリング、編集、公開または確認することはありません。コメントは、当社、その代理人および/または関連会社の見解や意見を反映するものではありません。コメントは、その意見および意見を投稿した人の意見および意見を反映するものです。適用される法律で認められている範囲において、当社のサービスは、コメント、またはコメントの使用および／または投稿および／または出現の結果生じたおよび／または被ったいかなる責任、損害または費用についても責任を負わないものとします。',
+  section_4_title: '免責事項',
   section_4_content_1:
-    'Your access to and use of our Services or any Content is at your own risk.',
+    '当社のサービスまたはあらゆるコンテンツへのアクセスおよび使用は、お客様自身のリスクで行うものとします。',
   section_4_content_2:
-    'YOU UNDERSTAND AND AGREE THAT THE SERVICES ARE PROVIDED TO YOU ON AN "AS IS" AND "AS AVAILABLE" BASIS. WITHOUT LIMITING THE FOREGOING, TO THE FULL EXTENT PERMITTED BY LAW, Our services DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.',
+    'お客様は、本サービスが「現状のまま」かつ「利用可能」な状態で提供されることを理解し、これに同意するものとします。上記を制限することなく、法律で許可されている最大限の範囲において、当社のサービスは、商品性、特定目的への適合性、または非侵害に関する明示または黙示の保証を一切放棄します。',
   section_4_content_3:
-    'Our services makes no representations or warranties of any kind with respect to the Services, including any representation or warranty that the use of the Services will (a) be timely, uninterrupted or error-free or operate in combination with any other hardware, software, system, or data, (b) meet your requirements or expectations, (c) be free from errors or that defects will be corrected, (d) be free of viruses or other harmful components; or (e) be entirely secure or that the information you share with us will be secure.',
+    '当社のサービスは、本サービスに関していかなる種類の表明も保証も行いません。これには、本サービスの使用が(a)タイムリーで、中断されず、エラーがなく、他のハードウェア、ソフトウェア、システム、またはデータと組み合わせて動作し、(b)お客様の要件または期待に適合し、(c)エラーがなく、欠陥が修正され、(d)ウイルスまたは他の有害なコンポーネントがなく、(e)完全に安全で、お客様が当社に伝える情報が安全になることに関するいかなる表明または保証をも含まれます。',
   section_4_content_4:
-    'Our services also makes no representations or warranties of any kind with respect to Content; User Content, in particular, is provided by and is solely the responsibility of, the Users providing that Content. No advice or information, whether oral or written, obtained from Our services or through the Services, will create any warranty not expressly made herein.',
-  section_5_title: 'Privacy',
+    '特にユーザーコンテンツは、そのコンテンツを提供するユーザーによって提供され、その責任はそのユーザーが負うものとします。当社のサービスから、またはサービスを通じて得られたいかなる助言または情報も、口頭または書面を問わず、ここに明示されていない保証を生じさせるものではありません。',
+  section_5_title: 'プライバシー',
   section_5_content_1:
-    'For information about how Our Services collects, uses, and shares your information, please review our Privacy Policy. By using the Services you agree you have read the Privacy Policy, which describes our collection, use, and sharing (as set forth in the Privacy Policy) of such information.',
+    '当社サービスがお客様の情報をどのように収集、使用、共有するかについての情報は、当社のプライバシーポリシーをご覧ください。お客様は、本サービスを利用することにより、当社の当該情報の収集、使用および共有（プライバシーポリシーに規定されているとおり）について記載されたプライバシーポリシーを読んだことに同意するものとします。',
 };
