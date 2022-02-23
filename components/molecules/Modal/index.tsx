@@ -10,18 +10,18 @@ type ModalProps = {
 export const Modal: React.FC<HTMLAttributes<HTMLElement> & ModalProps> = (props) => {
   const ref = useRef<HTMLElement>();
   const [mounted, setMounted] = useState(false);
-  const overlayClassName = `absolute top-0 w-screen h-screen bg-black opacity-50`;
-  const cardClassName = `absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2`;
+  const overlayClassName = `fixed top-0 w-full h-full bg-black opacity-50`;
+  const cardWrapperClassName = `fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2`;
 
   useEffect(() => {
-    ref.current = document.getElementById('__next') || document.getElementsByTagName('main')[0]
+    ref.current = document.getElementsByTagName('main')[0]
     setMounted(true)
   }, [])
 
   const modalEl = (
     <>
       <section className={overlayClassName} onClick={props.onClose} />
-      <section className={cardClassName} onClick={props.onClose}>
+      <section className={cardWrapperClassName} onClick={props.onClose}>
         <Card className='relative flex flex-col items-center'>
           {props.children}
         </Card>
