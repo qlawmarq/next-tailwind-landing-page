@@ -4,3 +4,5 @@ export * from './H3';
 export * from './H4';
 export * from './H5';
 export * from './Paragraph';
+export * from './Label';
+export * from './Span';

@@ -26,6 +26,11 @@ export const Footer = () => {
                 </li>
                 <li>
                   <Paragraph className="flex cursor-pointer pb-2 hover:text-primary-500">
+                    <Link href="/contact">Contact Us</Link>
+                  </Paragraph>
+                </li>
+                <li>
+                  <Paragraph className="flex cursor-pointer pb-2 hover:text-primary-500">
                     <Link href="/privacy-policy">Privacy Policy</Link>
                   </Paragraph>
                 </li>

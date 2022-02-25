@@ -19,8 +19,7 @@ export default {
   price_amount_1: '無料',
   price_features_1_1: '全ての機能',
   price_title_2: '寄付',
-  price_description_2:
-    '感謝の気持ちを込めて、寄付をしませんか？',
+  price_description_2: '感謝の気持ちを込めて、寄付をしませんか？',
   price_amount_2: 'あなた次第',
   price_features_2_1: '全ての機能',
   price_features_2_2: '作者から感謝されます',
