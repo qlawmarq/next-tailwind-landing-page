@@ -29,29 +29,29 @@ export const ContactForm = () => {
   );
   return (
     <Container>
-      <div className="relative mx-auto flex w-full flex-col py-6">
-        <H1 className='mb-6'>Contact Us</H1>
+      <div className="relative mx-auto flex w-full flex-col ">
+        <H1 className="mb-6">Contact Us</H1>
         <form onSubmit={handleSubmit((d) => console.log(d))}>
           <Input
             register={register('email')}
             error={formState.errors.email?.message}
             label="EMail"
             inputMode="email"
-            className='mb-3'
+            className="mb-3"
           />
           <Input
             register={register('subject')}
             error={formState.errors.subject?.message}
             label="Subject"
             inputMode="text"
-            className='mb-3'
+            className="mb-3"
           />
           <Textarea
             register={register('message')}
             error={formState.errors.message?.message}
             label="Message"
             inputMode="text"
-            className='mb-3'
+            className="mb-3"
           />
           <Button itemType="submit">Submit</Button>
         </form>

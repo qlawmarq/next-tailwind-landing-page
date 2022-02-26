@@ -7,7 +7,7 @@ export const PrivacyPolicy = () => {
 
   return (
     <Container>
-      <div className="relative mx-auto flex min-h-screen w-full flex-wrap items-center py-6">
+      <div className="relative mx-auto flex min-h-screen w-full flex-wrap items-center ">
         <div className="mb-3">
           <H1 className="mb-6">{t.PrivacyPolicyPage.section_1_title}</H1>
           <Paragraph className="mb-2">

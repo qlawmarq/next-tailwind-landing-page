@@ -7,7 +7,7 @@ import { Button } from '../../atoms/Button';
 export const NotFound = () => {
   return (
     <Container>
-      <div className="relative mx-auto flex min-h-screen w-full flex-wrap items-center py-6">
+      <div className="relative mx-auto flex min-h-screen w-full flex-wrap items-center ">
         <div className="w-full p-4 text-center md:w-5/12">
           <Image className="" src={MagicGirl} alt="Not Found" />
         </div>

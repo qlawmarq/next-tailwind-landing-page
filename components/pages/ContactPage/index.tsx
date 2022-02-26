@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import { Header } from '../../organisms/Header';
+import { Footer } from '../../organisms/Footer';
 import { ContactForm } from '../../templates/ContactForm';
 
 export const ContactPage = () => {
@@ -13,6 +14,7 @@ export const ContactPage = () => {
       <main className="font-montserrat">
         <Header />
         <ContactForm />
+        <Footer />
       </main>
     </>
   );
