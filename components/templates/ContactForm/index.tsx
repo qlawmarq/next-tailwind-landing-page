@@ -7,16 +7,17 @@ import { Button } from '../../atoms/Button';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+import { ApiService, EmailJSSendParams } from '../../../lib/api'
 
 interface IFormInputs {
   email: string;
-  subject: string;
+  name: string;
   message: string;
 }
 
 const schema = z.object({
   email: z.string().email().nonempty(),
-  subject: z.string().nonempty(),
+  name: z.string().nonempty(),
   message: z.string().nonempty(),
 });
 
@@ -27,11 +28,14 @@ export const ContactForm = () => {
       resolver: zodResolver(schema),
     }
   );
+  const onSubmit = (param: EmailJSSendParams) => {
+    ApiService.emailjsSend(param)
+  }
   return (
     <Container>
       <div className="relative mx-auto flex w-full flex-col ">
         <H1 className="mb-6">Contact Us</H1>
-        <form onSubmit={handleSubmit((d) => console.log(d))}>
+        <form onSubmit={handleSubmit((d) => onSubmit(d))}>
           <Input
             register={register('email')}
             error={formState.errors.email?.message}
@@ -40,9 +44,9 @@ export const ContactForm = () => {
             className="mb-3"
           />
           <Input
-            register={register('subject')}
-            error={formState.errors.subject?.message}
-            label="Subject"
+            register={register('name')}
+            error={formState.errors.name?.message}
+            label="Name"
             inputMode="text"
             className="mb-3"
           />

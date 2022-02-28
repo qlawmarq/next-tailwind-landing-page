@@ -1,11 +1,6 @@
-export interface SigninModel {
+export interface EmailJSSendParams {
   email: string;
-  password: string;
+  name: string;
+  message: string;
 }
 
-export interface userModel {
-  email: string;
-  first_name: string;
-  last_name: string;
-  password: string;
-}

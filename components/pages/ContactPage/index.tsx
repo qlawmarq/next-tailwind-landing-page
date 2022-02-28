@@ -8,7 +8,7 @@ export const ContactPage = () => {
   return (
     <>
       <Head>
-        <title>404 Not Found</title>
+        <title>Contact</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="font-montserrat">

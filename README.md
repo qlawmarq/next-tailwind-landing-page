@@ -5,7 +5,7 @@
 
 In this project, EmailJS is used for sending forward email.
 
-https://www.emailjs.com/docs/sdk/installation/
+https://www.emailjs.com/docs/rest-api/send/
 
 ## Icons
 
