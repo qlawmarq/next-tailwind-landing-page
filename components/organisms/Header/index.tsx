@@ -63,6 +63,11 @@ export const Header: React.FC = () => {
               </li>
               <li>
                 <Paragraph className="flex cursor-pointer py-2 px-8 hover:text-primary-500">
+                  <Link href="/contact">Contact Us</Link>
+                </Paragraph>
+              </li>
+              <li>
+                <Paragraph className="flex cursor-pointer py-2 px-8 hover:text-primary-500">
                   <Link href="/privacy-policy">Privacy Policy</Link>
                 </Paragraph>
               </li>

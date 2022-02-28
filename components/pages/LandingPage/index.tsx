@@ -12,7 +12,7 @@ import { H1 } from '../../atoms/Typography';
 import { useLocale } from '../../../hooks/useLocale';
 
 export const LandingPage = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   const { t } = useLocale();
   return (
     <>
@@ -21,7 +21,9 @@ export const LandingPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="font-montserrat">
-        <Modal isOpen={isOpen} onClose={()=>setIsOpen(!isOpen)} >TESTETSTETSTE</Modal>
+        <Modal isOpen={isOpen} onClose={() => setIsOpen(!isOpen)}>
+          TESTETSTETSTE
+        </Modal>
         <Header />
         <CTA
           title={t.LandingPage.first_title}
@@ -36,9 +38,9 @@ export const LandingPage = () => {
         />
         <Carousel
           items={[
-            <H1 className='text-center'>{t.LandingPage.carousel_1}</H1>,
-            <H1 className='text-center'>{t.LandingPage.carousel_2}</H1>,
-            <H1 className='text-center'>{t.LandingPage.carousel_3}</H1>,
+            <H1 className="text-center">{t.LandingPage.carousel_1}</H1>,
+            <H1 className="text-center">{t.LandingPage.carousel_2}</H1>,
+            <H1 className="text-center">{t.LandingPage.carousel_3}</H1>,
           ]}
         />
         <FAQ

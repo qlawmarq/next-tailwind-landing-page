@@ -9,7 +9,7 @@ type Props = {
 export const Carousel: React.FC<Props> = ({ items }) => {
   return (
     <Container>
-      <div className="relative mx-auto flex w-full flex-col py-6">
+      <div className="relative mx-auto flex w-full flex-col ">
         <CarouselContainer items={items} />
       </div>
     </Container>

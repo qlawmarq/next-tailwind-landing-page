@@ -22,7 +22,7 @@ export const CTA: React.FC<Props> = ({
   return (
     <Container>
       {!isImageRight && (
-        <div className="relative mx-auto flex w-full flex-col py-6 sm:flex-row">
+        <div className="relative mx-auto flex w-full flex-col  sm:flex-row">
           <div className="relative sm:w-6/12">
             <Image className="" src={image} alt="" />
           </div>
@@ -35,7 +35,7 @@ export const CTA: React.FC<Props> = ({
       )}
 
       {isImageRight && (
-        <div className="relative mx-auto flex w-full flex-col-reverse py-6 sm:flex-row">
+        <div className="relative mx-auto flex w-full flex-col-reverse  sm:flex-row">
           <div className="relative mr-auto mt-8 mb-16 flex flex-col items-start sm:mt-0 sm:mb-0 sm:w-5/12 sm:items-start sm:text-left xl:w-4/12 xl:pt-20">
             <H1 className="mb-4">{title}</H1>
             <H5 className="mb-4 sm:mb-12">{description}</H5>

@@ -13,7 +13,7 @@ type Props = {
 export const FAQ: React.FC<Props> = ({ title, description, qas }) => {
   return (
     <Container>
-      <div className="relative mx-auto w-full py-6">
+      <div className="relative mx-auto w-full ">
         <div className="flex flex-col md:flex-row">
           <div className="flex flex-col">
             <H1>{title}</H1>
