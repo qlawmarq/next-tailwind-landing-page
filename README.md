@@ -3,9 +3,31 @@
 
 ## Contact Form
 
-In this project, EmailJS is used for sending forward email.
+In this project, EmailJS is used for forwarding message to your email.
 
-https://www.emailjs.com/docs/rest-api/send/
+https://dashboard.emailjs.com/sign-up
+
+In order to activate the concact form feature, you need to register with EmailJS first.
+
+Then you need to create an email template like this one.
+
+```
+Hello,
+
+You got a new message from {{name}} {{email}}:
+
+{{message}}
+
+Best wishes,
+EmailJS team
+```
+
+At least, the template should have the `name`, `email`, and `message` parameters.
+
+Or you can customize parameters.
+
+https://www.emailjs.com/docs/user-guide/creating-email-templates/
+
 
 ## Icons
 
