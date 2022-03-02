@@ -11,7 +11,7 @@
     "format": "prettier --write './**/*.{js,ts,tsx}' --config ./.prettierrc.js"
   },
   "dependencies": {
-    "@heroicons/react": "1.0.5",
+    "@heroicons/react": "1.0.6",
     "@hookform/resolvers": "2.8.8",
     "@react-spring/web": "9.4.3",
     "axios": "0.26.0",
