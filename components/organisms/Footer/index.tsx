@@ -6,8 +6,10 @@ import TwitterIcon from 'mdi-react/TwitterIcon';
 import YoutubeIcon from 'mdi-react/YoutubeIcon';
 import InstagramIcon from 'mdi-react/InstagramIcon';
 import Link from 'next/link';
+import { useLocale } from '../../../hooks/useLocale';
 
 export const Footer = () => {
+  const { t } = useLocale();
   const [thisYear] = useState(new Date().getFullYear());
   return (
     <footer className="pt-12 pb-6">
@@ -21,22 +23,26 @@ export const Footer = () => {
               <ul>
                 <li>
                   <Paragraph className="flex cursor-pointer pb-2 hover:text-primary-500">
-                    <Link href="/">Home</Link>
+                    <Link href="/">{t.LandingPage.title}</Link>
                   </Paragraph>
                 </li>
                 <li>
                   <Paragraph className="flex cursor-pointer pb-2 hover:text-primary-500">
-                    <Link href="/contact">Contact Us</Link>
+                    <Link href="/contact">{t.ContactPage.title}</Link>
                   </Paragraph>
                 </li>
                 <li>
                   <Paragraph className="flex cursor-pointer pb-2 hover:text-primary-500">
-                    <Link href="/privacy-policy">Privacy Policy</Link>
+                    <Link href="/privacy-policy">
+                      {t.PrivacyPolicyPage.title}
+                    </Link>
                   </Paragraph>
                 </li>
                 <li>
                   <Paragraph className="flex cursor-pointer pb-2 hover:text-primary-500">
-                    <Link href="/terms-conditions">Terms and Conditions</Link>
+                    <Link href="/terms-conditions">
+                      {t.TermsConditionsPage.title}
+                    </Link>
                   </Paragraph>
                 </li>
               </ul>

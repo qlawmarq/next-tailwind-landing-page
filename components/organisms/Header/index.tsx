@@ -3,8 +3,10 @@ import { animated, useSpring } from '@react-spring/web';
 import { Container } from '../../atoms/Container';
 import Link from 'next/link';
 import { Paragraph } from '../../atoms/Typography';
+import { useLocale } from '../../../hooks/useLocale';
 
 export const Header: React.FC = () => {
+  const { t } = useLocale();
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const navStyle = useSpring({
     opacity: isOpen ? 0.9 : 0,
@@ -58,22 +60,26 @@ export const Header: React.FC = () => {
             <ul className="mt-24 flex flex-col">
               <li>
                 <Paragraph className="flex cursor-pointer py-2 px-8 hover:text-primary-500">
-                  <Link href="/">Home</Link>
+                  <Link href="/">{t.LandingPage.title}</Link>
                 </Paragraph>
               </li>
               <li>
                 <Paragraph className="flex cursor-pointer py-2 px-8 hover:text-primary-500">
-                  <Link href="/contact">Contact Us</Link>
+                  <Link href="/contact">{t.ContactPage.title}</Link>
                 </Paragraph>
               </li>
               <li>
                 <Paragraph className="flex cursor-pointer py-2 px-8 hover:text-primary-500">
-                  <Link href="/privacy-policy">Privacy Policy</Link>
+                  <Link href="/privacy-policy">
+                    {t.PrivacyPolicyPage.title}
+                  </Link>
                 </Paragraph>
               </li>
               <li>
                 <Paragraph className="flex cursor-pointer py-2 px-8 hover:text-primary-500">
-                  <Link href="/terms-conditions">Terms and Conditions</Link>
+                  <Link href="/terms-conditions">
+                    {t.TermsConditionsPage.title}
+                  </Link>
                 </Paragraph>
               </li>
             </ul>

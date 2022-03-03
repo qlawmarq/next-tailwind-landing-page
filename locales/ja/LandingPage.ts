@@ -1,4 +1,5 @@
 export default {
+  title: 'ランディングページ',
   first_title: 'Next.js/TailwindCSS によるランディングページ用テンプレート',
   first_description:
     'ランディングページを素早く構成するためのテンプレートです。',
@@ -9,14 +10,14 @@ export default {
   carousel_2: 'Next.jsによる最適化',
   carousel_3: '利用は無料',
   faq_title: 'よくある質問',
-  faq_description: 'どのように利用するのか疑問がありますか？',
-  question_1: 'どのようにインストールしたらいいか？',
+  faq_description: 'なにかお困りですか？',
+  question_1: 'どのようにインストールしたらいいですか？',
   answer_1: 'GitHubのページをご覧ください、説明があります。',
   question_2: '使用前に気をつけることは？',
   answer_2: '利用規約とプライバシーポリシーをご覧ください',
   price_title_1: '無料',
   price_description_1: '全ての機能を無料で使えます！',
-  price_amount_1: '無料',
+  price_amount_1: '永年無料',
   price_features_1_1: '全ての機能',
   price_title_2: '寄付',
   price_description_2: '感謝の気持ちを込めて、寄付をしませんか？',

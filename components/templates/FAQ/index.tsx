@@ -13,24 +13,22 @@ type Props = {
 export const FAQ: React.FC<Props> = ({ title, description, qas }) => {
   return (
     <Container>
-      <div className="relative mx-auto w-full ">
-        <div className="flex flex-col md:flex-row">
-          <div className="flex flex-col">
-            <H1>{title}</H1>
-            <H5 className="my-2">{description}</H5>
-          </div>
-          <div className="md:w-2/3">
-            {qas.map((qa, idx) => {
-              return (
-                <Accordion
-                  key={idx}
-                  className="mb-2"
-                  question={qa.question}
-                  answer={qa.answer}
-                />
-              );
-            })}
-          </div>
+      <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-4">
+        <div className="col-span-1 flex w-full flex-col">
+          <H1>{title}</H1>
+          <H5 className="my-2">{description}</H5>
+        </div>
+        <div className="col-span-3 w-full">
+          {qas.map((qa, idx) => {
+            return (
+              <Accordion
+                key={idx}
+                className="mb-2"
+                question={qa.question}
+                answer={qa.answer}
+              />
+            );
+          })}
         </div>
       </div>
     </Container>

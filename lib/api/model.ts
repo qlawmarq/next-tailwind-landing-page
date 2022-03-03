@@ -3,4 +3,3 @@ export interface EmailJSSendParams {
   name: string;
   message: string;
 }
-

@@ -1,6 +1,6 @@
 import http from './http';
 import { EmailJSSendParams } from './model';
-import config from '../../config'
+import config from '../../config';
 
 class ApiService {
   //   get(): Promise<any> {
@@ -18,8 +18,8 @@ class ApiService {
       service_id: config.emailjs.service_id,
       template_id: config.emailjs.template_id,
       user_id: config.emailjs.user_id,
-      template_params: data
-  }
+      template_params: data,
+    };
     return http.post(endpoint, params);
   }
 }

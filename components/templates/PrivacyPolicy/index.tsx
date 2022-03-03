@@ -43,22 +43,12 @@ export const PrivacyPolicy = () => {
           <Paragraph className="mb-2">
             {t.PrivacyPolicyPage.section_4_content_1}
           </Paragraph>
-          <Paragraph className="mb-2">
-            {t.PrivacyPolicyPage.section_4_content_2}
-          </Paragraph>
         </div>
 
         <div className="mb-3">
           <H2 className="mb-3">{t.PrivacyPolicyPage.section_5_title}</H2>
           <Paragraph className="mb-2">
             {t.PrivacyPolicyPage.section_5_content_1}
-          </Paragraph>
-        </div>
-
-        <div className="mb-3">
-          <H2 className="mb-3">{t.PrivacyPolicyPage.section_6_content_1}</H2>
-          <Paragraph className="mb-2">
-            {t.PrivacyPolicyPage.section_6_title}
           </Paragraph>
         </div>
       </div>

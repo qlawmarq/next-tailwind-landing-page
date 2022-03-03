@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { Modal } from '../../molecules/Modal';
-
 import { Header } from '../../organisms/Header';
 import { Footer } from '../../organisms/Footer';
 import { CTA } from '../../templates/CTA';
@@ -17,7 +16,7 @@ export const LandingPage = () => {
   return (
     <>
       <Head>
-        <title>{t.LandingPage.first_title}</title>
+        <title>{t.LandingPage.title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="font-montserrat">
@@ -49,11 +48,11 @@ export const LandingPage = () => {
           qas={[
             {
               question: t.LandingPage.question_1,
-              answer: t.LandingPage.question_1,
+              answer: t.LandingPage.answer_1,
             },
             {
               question: t.LandingPage.question_2,
-              answer: t.LandingPage.question_2,
+              answer: t.LandingPage.answer_2,
             },
           ]}
         />
