@@ -16,8 +16,8 @@ const CommonSEO = ({ title, description, ogType, ogImage, twImage }: TypeCommonS
   return (
     <Head>
       <title>{title}</title>
-      <meta name="robots" content="noindex"/>
-      <meta name="robots" content="nofollow"/>
+      {/* <meta name="robots" content="noindex"/>
+      <meta name="robots" content="nofollow"/> */}
       <meta name="description" content={description} />
       <meta property="og:url" content={`${config.metadata.siteUrl}${router.asPath}`} />
       <meta property="og:type" content={ogType} />
