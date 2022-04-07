@@ -1,5 +1,6 @@
 export default {
   title: 'ランディングページ',
+  description: 'ランディングページ',
   first_title: 'Next.js/TailwindCSS によるランディングページ用テンプレート',
   first_description:
     'ランディングページを素早く構成するためのテンプレートです。',

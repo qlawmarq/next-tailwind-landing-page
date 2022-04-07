@@ -1,5 +1,6 @@
 export default {
   title: 'Home',
+  description: 'Home of Awesome Landing Page Template',
   first_title: 'Awesome Landing Page Template',
   first_description:
     'This is an template for landing page and can strongly support you to compose your landing page quickly.',

@@ -1,5 +1,6 @@
 export default {
   title: 'Contact Us',
+  description: 'Contact Page of Awesome Landing Page Template',
   email: 'E-mail',
   name: 'Name',
   message: 'Message',

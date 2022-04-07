@@ -1,5 +1,6 @@
 export default {
   title: 'Terms and Conditions',
+  description: 'Terms and Conditions Page of Awesome Landing Page Template',
   section_1_title: 'Terms and Conditions',
   section_1_content_1:
     'By accessing this website or using any of the services we provide, we will assume that you agree to these terms and conditions.',

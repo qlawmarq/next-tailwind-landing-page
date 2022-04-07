@@ -3,15 +3,13 @@ import { Header } from '../../organisms/Header';
 import { Footer } from '../../organisms/Footer';
 import { PrivacyPolicy } from '../../templates/PrivacyPolicy';
 import { useLocale } from '../../../hooks/useLocale';
+import { PageSEO } from '../../../lib/SEO';
 
 export const PrivacyPolicyPage = () => {
   const { t } = useLocale();
   return (
     <>
-      <Head>
-        <title>{t.PrivacyPolicyPage.title}</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <PageSEO pageTitle={t.PrivacyPolicyPage.title}  description={t.PrivacyPolicyPage.description}/>
       <main className="font-montserrat">
         <Header />
         <PrivacyPolicy />

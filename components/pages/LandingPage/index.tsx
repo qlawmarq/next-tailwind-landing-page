@@ -9,16 +9,14 @@ import { Prices } from '../../templates/Prices';
 import { Carousel } from '../../templates/Carousel';
 import { H1 } from '../../atoms/Typography';
 import { useLocale } from '../../../hooks/useLocale';
+import { PageSEO } from '../../../lib/SEO';
 
 export const LandingPage = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useLocale();
   return (
     <>
-      <Head>
-        <title>{t.LandingPage.title}</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <PageSEO pageTitle={t.LandingPage.title} description={t.LandingPage.description} />
       <main className="font-montserrat">
         <Modal isOpen={isOpen} onClose={() => setIsOpen(!isOpen)}>
           TESTETSTETSTE

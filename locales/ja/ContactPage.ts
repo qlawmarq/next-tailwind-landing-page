@@ -1,5 +1,6 @@
 export default {
   title: 'お問合せ',
+  description: 'お問合せページ',
   email: 'メールアドレス',
   name: '名前',
   message: '内容',

@@ -1,5 +1,6 @@
 export default {
   title: '利用規約',
+  description: '利用規約',
   section_1_title: '利用規約',
   section_1_content_1:
     '本ウェブサイトにアクセスし、当社が提供するサービスを利用された場合、当社はお客様がこれらの条件に同意されたものとみなします。',
