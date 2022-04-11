@@ -9,7 +9,10 @@ const Component: React.FC<InputHTMLAttributes<HTMLTextAreaElement> & BaseProps> 
       </textarea>
     );
   });
+Component.displayName = "TextareaBaseComponent";
+
 
 export const Textarea: React.FC<BaseProps> = forwardRef((props, ref) => {
   return <Base component={Component} {...props} {...ref} />;
 });
+Textarea.displayName = "Textarea";

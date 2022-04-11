@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Head from 'next/head';
 import { Modal } from '../../molecules/Modal';
 import { Header } from '../../organisms/Header';
 import { Footer } from '../../organisms/Footer';
@@ -35,9 +34,9 @@ export const LandingPage = () => {
         />
         <Carousel
           items={[
-            <H1 className="text-center">{t.LandingPage.carousel_1}</H1>,
-            <H1 className="text-center">{t.LandingPage.carousel_2}</H1>,
-            <H1 className="text-center">{t.LandingPage.carousel_3}</H1>,
+            <H1 key={1} className="text-center">{t.LandingPage.carousel_1}</H1>,
+            <H1 key={2} className="text-center">{t.LandingPage.carousel_2}</H1>,
+            <H1 key={3} className="text-center">{t.LandingPage.carousel_3}</H1>,
           ]}
         />
         <FAQ

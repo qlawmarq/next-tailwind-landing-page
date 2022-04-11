@@ -1,4 +1,4 @@
-import React, { useState, HTMLAttributes } from 'react';
+import React, { useState } from 'react';
 import { animated, useSpring } from '@react-spring/web';
 import { Container } from '../../atoms/Container';
 import Link from 'next/link';

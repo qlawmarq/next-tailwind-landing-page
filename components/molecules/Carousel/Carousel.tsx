@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useCallback, useState } from 'react';
-import { useSprings, a, useSpring } from '@react-spring/web';
+import { useSprings, a } from '@react-spring/web';
 import { ArrowRightIcon, ArrowLeftIcon } from '@heroicons/react/solid';
 import { CarouselItem } from './CarouselItem';
 
@@ -8,7 +8,6 @@ type CarouselProps = {
   width: number;
   interval?: number;
   showButtons?: boolean;
-  showCounter?: boolean;
 };
 
 export const Carousel: React.FC<CarouselProps> = ({
@@ -16,9 +15,8 @@ export const Carousel: React.FC<CarouselProps> = ({
   width,
   interval,
   showButtons = true,
-  showCounter = true,
 }) => {
-  const [visible, setVisible] = useState(items.length - 2);
+  const [visible] = useState(items.length - 2);
 
   const idx = useCallback(
     (x, l = items.length) => (x < 0 ? x + l : x) % l,
@@ -92,12 +90,11 @@ export const Carousel: React.FC<CarouselProps> = ({
     if (interval) {
       setInterval(() => onClickButtons(1), interval);
     }
-  }, []);
+  }, [interval]);
 
   return (
     <>
       {springs.map(({ x }, i) => (
-        // <a.div key={i} style={{ width, x }} children={items[i]} >
         <a.div
           key={i}
           style={{
@@ -127,39 +124,6 @@ export const Carousel: React.FC<CarouselProps> = ({
           </button>
         </>
       ) : null}
-      {/* {showCounter ? <InstaCounter currentIndex={active} data={items} /> : null} */}
     </>
   );
 };
-
-// function InstaCounter({ currentIndex, data }) {
-//   const dots = [];
-//   for (const [index] of data.entries()) {
-//     dots.push(<Dot key={index} active={currentIndex - 1 === index} />);
-//   }
-//   return (
-//     <div className="relative top-36">
-//       <div className="flex items-center justify-center p-1">{dots}</div>
-//     </div>
-//   );
-// }
-// function Dot({ active }) {
-//   const { transform, opacity } = useSpring({
-//     opacity: active ? 1 : 0.8,
-//     transform: active ? `scale(1.5)` : `scale(1)`,
-//     config: { mass: 5, tension: 500, friction: 80 },
-//   });
-//   return (
-//     <a.div
-//       style={{
-//         opacity: opacity.to((o) => o),
-//         transform,
-//         borderRadius: '99px',
-//         background: '#000',
-//         width: '5px',
-//         height: '5px',
-//         margin: '.3rem',
-//       }}
-//     />
-//   );
-// }

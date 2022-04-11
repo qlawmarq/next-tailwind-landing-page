@@ -1,7 +1,6 @@
 import React, { InputHTMLAttributes } from 'react';
 import { Label, Span } from '../../Typography';
 import { UseFormRegisterReturn } from 'react-hook-form';
-import { HtmlProps } from 'next/dist/shared/lib/utils';
 
 export type BaseProps = InputHTMLAttributes<HTMLElement> & {
   label?: string;

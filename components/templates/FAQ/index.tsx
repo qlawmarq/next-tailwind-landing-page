@@ -1,7 +1,5 @@
-import { H1, H5, Paragraph } from '../../atoms/Typography';
+import { H1, H5 } from '../../atoms/Typography';
 import { Container } from '../../atoms/Container';
-import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/outline';
-import { Card } from '../../atoms/Card';
 import { Accordion, Props as AccordionProps } from '../../molecules/Accordion';
 
 type Props = {

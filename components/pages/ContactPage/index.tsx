@@ -1,5 +1,4 @@
 import React from 'react';
-import Head from 'next/head';
 import { Header } from '../../organisms/Header';
 import { Footer } from '../../organisms/Footer';
 import { ContactForm } from '../../templates/ContactForm';

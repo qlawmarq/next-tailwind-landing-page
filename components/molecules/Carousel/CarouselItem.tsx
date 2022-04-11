@@ -1,6 +1,4 @@
 import React from 'react';
-import analyzeData from '../../../public/images/analyze_data.png';
-import Image from 'next/image';
 import { Card } from '../../atoms/Card';
 
 export const CarouselItem: React.FC = ({ children }) => {

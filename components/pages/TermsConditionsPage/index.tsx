@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { Header } from '../../organisms/Header';
 import { Footer } from '../../organisms/Footer';
 import { TermsConditions } from '../../templates/TermsConditions';
