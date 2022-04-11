@@ -1,7 +1,7 @@
-import React, { forwardRef, HTMLAttributes } from 'react';
+import React, { forwardRef, InputHTMLAttributes } from 'react';
 import { Base, BaseProps } from '../Base';
 
-const Component: React.FC<HTMLAttributes<HTMLInputElement> & BaseProps> =
+const Component: React.FC<InputHTMLAttributes<HTMLInputElement> & BaseProps> =
   forwardRef((props, ref) => {
     return (
       <input {...props} {...props.register} {...ref}>

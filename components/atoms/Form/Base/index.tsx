@@ -1,16 +1,16 @@
-import React, { HTMLAttributes } from 'react';
+import React, { InputHTMLAttributes } from 'react';
 import { Label, Span } from '../../Typography';
 import { UseFormRegisterReturn } from 'react-hook-form';
 import { HtmlProps } from 'next/dist/shared/lib/utils';
 
-export type BaseProps = HTMLAttributes<HTMLElement> & {
+export type BaseProps = InputHTMLAttributes<HTMLElement> & {
   label?: string;
   error?: string;
   register?: UseFormRegisterReturn;
 };
 
 type Component = {
-  component: React.FC<HTMLAttributes<HTMLElement>>;
+  component: React.FC<InputHTMLAttributes<HTMLElement>>;
 };
 
 export const Base: React.FC<BaseProps & Component> = (props) => {
