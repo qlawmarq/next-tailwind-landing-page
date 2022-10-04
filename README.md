@@ -1,15 +1,30 @@
 # tailwind-landing-page-next
 
+## What's this?
 
-## Contact Form
+Just a sample landing page that originally was made for my app's promotion.
+
+https://tailwind-landing-page-next-template.vercel.app/
+
+- Tailwind CSS
+- Next.js
+
+## Notes
+
+### Contact Form
 
 In this project, EmailJS is used for forwarding message to your email.
 
+**By default, cntact form page does not work. Need to get API keys of EmailJS to activate contact form**
+
 https://dashboard.emailjs.com/sign-up
 
-### Create an Email Template
+Please follow the instructions below to activate contact form.
 
-In order to activate the concact form feature, you need to register with EmailJS first.
+
+#### 1. Create an Email Template
+
+In order to activate Contact form, **you need to register with EmailJS first**.
 
 Then you need to create an email template like this one.
 
@@ -30,27 +45,35 @@ Or you can customize parameters.
 
 https://www.emailjs.com/docs/user-guide/creating-email-templates/
 
-After finishing creation, please copy your Template ID.
+After finishing creation,  **please copy your Template ID.**
 
 
-### Create an Email Services
+#### 2. Create an Email Services
 
 Create an Email Service in EmailJS.
 
-After finishing creation, please copy your Services ID.
+After finishing creation,  **please copy your Services ID.**
 
-### Get your User ID
 
-you need to get your User ID from here:
+#### 3. Get your User ID
+
+**you need to get your User ID from here:**
 https://dashboard.emailjs.com/admin/integration
 
 
-### Update the config
+#### 4. Update the config
 
-All setup has been finished, then update `config/index.ts`.
+All setup has been finished, **finally please update `config/index.ts` based on the information obtained.**
 
 
-## Icons
+### Icons
+
+The following icon library is already used in this sample:
+
+- [heroicons](https://heroicons.com/)
+- [Material Design Icons](https://pictogrammers.github.io/@mdi/font/6.5.95/)
+
+You can search for icons you want to use, and add them as follows:
 
 ```ts
 import AlertCircleIcon from 'mdi-react/AlertCircleIcon';
@@ -65,5 +88,3 @@ const MyComponent = () => {
 };
 ```
 
-https://heroicons.com/
-https://pictogrammers.github.io/@mdi/font/6.5.95/
