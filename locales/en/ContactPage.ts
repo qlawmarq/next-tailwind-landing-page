@@ -1,6 +1,6 @@
 export default {
   title: 'Contact Us',
-  description: 'Contact Page of Awesome Landing Page Template',
+  description: 'Contact Page of Next Tailwind Landing Page Template',
   email: 'E-mail',
   name: 'Name',
   message: 'Message',

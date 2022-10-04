@@ -1,6 +1,6 @@
 import http from './http';
 import { EmailJSSendParams } from './model';
-import config from '../../config';
+import { config } from '../../config';
 
 class ApiService {
   //   get(): Promise<any> {

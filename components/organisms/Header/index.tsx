@@ -28,9 +28,7 @@ export const Header: React.FC = () => {
       <header className="fixed z-20 flex h-24 w-full items-center  overflow-hidden">
         <Container>
           <div className="flex items-start text-2xl font-black text-primary-900">
-            <Link href="/">
-              Company
-            </Link>
+            <Link href="/">Company</Link>
           </div>
 
           <div className="z-20 flex items-end">

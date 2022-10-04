@@ -1,4 +1,4 @@
-# tailwind-landing-page-next
+# next-tailwind-landing-page
 
 ## What's this?
 
@@ -6,10 +6,39 @@ Just a sample landing page that originally was made for my app's promotion.
 
 https://tailwind-landing-page-next-template.vercel.app/
 
+### Elements
+
 - Tailwind CSS
 - Next.js
 
+### Features
+
+- Multiple Language Support and Localization (i18n)
+- Contact form (with [EmailJS](https://dashboard.emailjs.com/sign-up))
+
 ## Notes
+
+### Multiple Language Support and Localization (i18n)
+
+This app automatically detect the language setting of user's browser, and display it in a suitable language for each user.   
+
+English and Japanese translation files already exist in the `locales` folder, but no others.
+
+The default language is English, but you can customize it in `next.config.js`:
+
+```js
+{
+  i18n: {
+    locales: ['en', 'ja'],
+    defaultLocale: 'en',
+  }
+}
+```
+
+For more information, please see below:
+
+https://nextjs.org/docs/advanced-features/i18n-routing
+
 
 ### Contact Form
 

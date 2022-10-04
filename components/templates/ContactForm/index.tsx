@@ -34,7 +34,7 @@ export const ContactForm = () => {
   });
   const onSubmit = (param: EmailJSSendParams) => {
     ApiService.emailjsSend(param);
-    setIsSentEmail(true)
+    setIsSentEmail(true);
   };
   return (
     <Container>
@@ -70,12 +70,12 @@ export const ContactForm = () => {
         )}
         {isSentEmail && (
           <>
-          <H1 className="mb-6">{t.ContactPage.message_was_sent}</H1>
-          <div className="flex items-center justify-center h-full">
-            <div className='w-56'>
-              <Image src={EmailSend} alt="Not Found" />
+            <H1 className="mb-6">{t.ContactPage.message_was_sent}</H1>
+            <div className="flex h-full items-center justify-center">
+              <div className="w-56">
+                <Image src={EmailSend} alt="Not Found" />
+              </div>
             </div>
-          </div>
           </>
         )}
       </div>

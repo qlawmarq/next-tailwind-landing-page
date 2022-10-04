@@ -29,7 +29,7 @@ export const Accordion: React.FC<Props & HTMLAttributes<HTMLElement>> = ({
         className="flex cursor-pointer flex-row-reverse "
       >
         <div className="flex-auto">
-          <Paragraph className='font-medium'>{question}</Paragraph>
+          <Paragraph className="font-medium">{question}</Paragraph>
         </div>
         <div className="px-2">
           <div className="text-primary-600">

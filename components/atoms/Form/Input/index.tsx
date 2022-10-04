@@ -9,10 +9,9 @@ const Component: React.FC<InputHTMLAttributes<HTMLInputElement> & BaseProps> =
       </input>
     );
   });
-Component.displayName = "InputBaseComponent";
+Component.displayName = 'InputBaseComponent';
 
 export const Input: React.FC<BaseProps> = forwardRef((props, ref) => {
   return <Base component={Component} {...props} {...ref} />;
 });
-Input.displayName = "Input";
-
+Input.displayName = 'Input';

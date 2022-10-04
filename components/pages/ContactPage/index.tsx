@@ -3,12 +3,15 @@ import { Header } from '../../organisms/Header';
 import { Footer } from '../../organisms/Footer';
 import { ContactForm } from '../../templates/ContactForm';
 import { useLocale } from '../../../hooks/useLocale';
-import { PageSEO } from '../../../lib/SEO';
+import { NextSeo } from 'next-seo';
 export const ContactPage = () => {
   const { t } = useLocale();
   return (
     <>
-      <PageSEO pageTitle={t.ContactPage.title} description={t.ContactPage.description}/>
+      <NextSeo
+        title={t.ContactPage.title}
+        description={t.ContactPage.description}
+      />
       <main className="font-montserrat">
         <Header />
         <ContactForm />

@@ -1,6 +1,6 @@
 export default {
   title: 'Privacy Policy',
-  description: 'Privacy Policy of Awesome Landing Page Template',
+  description: 'Privacy Policy of Next Tailwind Landing Page Template',
   section_1_title: 'Privacy Policy',
   section_1_content_1:
     'This page is used to inform website visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service.',

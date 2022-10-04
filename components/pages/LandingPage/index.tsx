@@ -8,14 +8,17 @@ import { Prices } from '../../templates/Prices';
 import { Carousel } from '../../templates/Carousel';
 import { H1 } from '../../atoms/Typography';
 import { useLocale } from '../../../hooks/useLocale';
-import { PageSEO } from '../../../lib/SEO';
+import { NextSeo } from 'next-seo';
 
 export const LandingPage = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useLocale();
   return (
     <>
-      <PageSEO pageTitle={t.LandingPage.title} description={t.LandingPage.description} />
+      <NextSeo
+        title={t.LandingPage.title}
+        description={t.LandingPage.description}
+      />
       <main className="font-montserrat">
         <Modal isOpen={isOpen} onClose={() => setIsOpen(!isOpen)}>
           TESTETSTETSTE
@@ -34,9 +37,15 @@ export const LandingPage = () => {
         />
         <Carousel
           items={[
-            <H1 key={1} className="text-center">{t.LandingPage.carousel_1}</H1>,
-            <H1 key={2} className="text-center">{t.LandingPage.carousel_2}</H1>,
-            <H1 key={3} className="text-center">{t.LandingPage.carousel_3}</H1>,
+            <H1 key={1} className="text-center">
+              {t.LandingPage.carousel_1}
+            </H1>,
+            <H1 key={2} className="text-center">
+              {t.LandingPage.carousel_2}
+            </H1>,
+            <H1 key={3} className="text-center">
+              {t.LandingPage.carousel_3}
+            </H1>,
           ]}
         />
         <FAQ
