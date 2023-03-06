@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { H2, Paragraph } from '../../atoms/Typography';
 import { Container } from '../../atoms/Container';
 import { Button } from '../../atoms/Button';
