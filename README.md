@@ -18,28 +18,6 @@ https://tailwind-landing-page-next-template.vercel.app/
 
 ## Notes
 
-### Multiple Language Support and Localization (i18n)
-
-This app automatically detect the language setting of user's browser, and display it in a suitable language for each user.   
-
-English and Japanese translation files already exist in the `locales` folder, but no others.
-
-The default language is English, but you can customize it in `next.config.js`:
-
-```js
-{
-  i18n: {
-    locales: ['en', 'ja'],
-    defaultLocale: 'en',
-  }
-}
-```
-
-For more information, please see below:
-
-https://nextjs.org/docs/advanced-features/i18n-routing
-
-
 ### Contact Form
 
 In this project, EmailJS is used for forwarding message to your email.
@@ -49,7 +27,6 @@ In this project, EmailJS is used for forwarding message to your email.
 https://dashboard.emailjs.com/sign-up
 
 Please follow the instructions below to activate contact form.
-
 
 #### 1. Create an Email Template
 
@@ -74,26 +51,22 @@ Or you can customize parameters.
 
 https://www.emailjs.com/docs/user-guide/creating-email-templates/
 
-After finishing creation,  **please copy your Template ID.**
-
+After finishing creation, **please copy your Template ID.**
 
 #### 2. Create an Email Services
 
 Create an Email Service in EmailJS.
 
-After finishing creation,  **please copy your Services ID.**
-
+After finishing creation, **please copy your Services ID.**
 
 #### 3. Get your User ID
 
 **you need to get your User ID from here:**
 https://dashboard.emailjs.com/admin/integration
 
-
 #### 4. Update the config
 
 All setup has been finished, **finally please update `config/index.ts` based on the information obtained.**
-
 
 ### Icons
 
@@ -116,4 +89,3 @@ const MyComponent = () => {
   );
 };
 ```
-
