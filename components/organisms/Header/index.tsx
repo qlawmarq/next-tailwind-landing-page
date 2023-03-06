@@ -3,39 +3,57 @@ import { animated, useSpring } from '@react-spring/web';
 import { Container } from '../../atoms/Container';
 import Link from 'next/link';
 import { Paragraph } from '../../atoms/Typography';
-import { useLocale } from '../../../hooks/useLocale';
+import Image from 'next/image';
+import { Button } from '../../atoms/Button';
 
 export const Header: React.FC = () => {
-  const { t } = useLocale();
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [IsSideMenuOpen, setIsSideMenuOpen] = useState<boolean>(false);
   const navStyle = useSpring({
-    opacity: isOpen ? 0.9 : 0,
-    right: isOpen ? 0 : -270,
+    opacity: IsSideMenuOpen ? 1 : 0,
+    right: IsSideMenuOpen ? 0 : -270,
   });
   const hamburgerStyle2 = useSpring({
-    opacity: isOpen ? 0 : 1,
+    opacity: IsSideMenuOpen ? 0 : 1,
   });
   const hamburgerStyle1 = useSpring({
-    y: isOpen ? 8 : 0,
-    rotate: isOpen ? 225 : 0,
+    y: IsSideMenuOpen ? 8 : 0,
+    rotate: IsSideMenuOpen ? 225 : 0,
   });
   const hamburgerStyle3 = useSpring({
-    y: isOpen ? -8 : 0,
-    rotate: isOpen ? -225 : 0,
+    y: IsSideMenuOpen ? -8 : 0,
+    rotate: IsSideMenuOpen ? -225 : 0,
   });
   return (
     <>
-      <header className="fixed z-20 flex h-24 w-full items-center  overflow-hidden">
+      <header className="fixed z-20 flex h-24 w-full items-center overflow-hidden bg-primary-50/30 backdrop-blur">
         <Container>
-          <div className="flex items-start text-2xl font-black text-primary-900">
-            <Link href="/">Company</Link>
+          <div className="flex items-center text-2xl font-black text-primary-900">
+            <div
+              style={{
+                position: 'relative',
+                width: '42px',
+                height: '42px',
+                marginRight: '8px',
+              }}
+            >
+              <Image
+                src="/images/icon.png"
+                layout="fill"
+                objectFit="contain"
+                alt="logo"
+                priority
+                loading="eager"
+              />
+            </div>
+            <Link href="/">ExamApp</Link>
           </div>
 
-          <div className="z-20 flex items-end">
+          {/* Burger for Sidemenu, only for mobile */}
+          <div className="z-20 flex items-end sm:hidden">
             <button
               className="ml-4 flex flex-col"
               onClick={() => {
-                setIsOpen(!isOpen);
+                setIsSideMenuOpen(!IsSideMenuOpen);
               }}
             >
               <animated.span
@@ -52,39 +70,54 @@ export const Header: React.FC = () => {
               />
             </button>
           </div>
-          <animated.nav
-            style={navStyle}
-            className="fixed top-0 z-10 flex h-full flex-col bg-primary-50 p-6 text-lg text-primary-900"
-          >
-            <ul className="mt-24 flex flex-col">
-              <li>
-                <Paragraph className="flex cursor-pointer py-2 px-8 hover:text-primary-500">
-                  <Link href="/">{t.LandingPage.title}</Link>
-                </Paragraph>
-              </li>
-              <li>
-                <Paragraph className="flex cursor-pointer py-2 px-8 hover:text-primary-500">
-                  <Link href="/contact">{t.ContactPage.title}</Link>
-                </Paragraph>
-              </li>
-              <li>
-                <Paragraph className="flex cursor-pointer py-2 px-8 hover:text-primary-500">
-                  <Link href="/privacy-policy">
-                    {t.PrivacyPolicyPage.title}
-                  </Link>
-                </Paragraph>
-              </li>
-              <li>
-                <Paragraph className="flex cursor-pointer py-2 px-8 hover:text-primary-500">
-                  <Link href="/terms-conditions">
-                    {t.TermsConditionsPage.title}
-                  </Link>
-                </Paragraph>
-              </li>
-            </ul>
-          </animated.nav>
+
+          {/* Only for PC */}
+          <div className="hidden items-end sm:flex">
+            <Paragraph className="flex cursor-pointer py-3 px-6 hover:text-primary-500">
+              <Link href="/">Home</Link>
+            </Paragraph>
+            <Paragraph className="flex cursor-pointer py-3 px-6 hover:text-primary-500">
+              <Link href="/contact">Contact</Link>
+            </Paragraph>
+            <Button
+              className="px-6"
+              onClick={() =>
+                window.open(
+                  'https://github.com/CyberBonfire/next-tailwind-landing-page'
+                )
+              }
+            >
+              Get ExamApp
+            </Button>
+          </div>
         </Container>
       </header>
+
+      {/* Sidemenu */}
+      <animated.nav
+        style={navStyle}
+        className="fixed top-0 z-10 flex h-full flex-col bg-primary-50/30 p-6 text-lg text-primary-900 backdrop-blur"
+      >
+        <ul className="mt-24 flex flex-col">
+          <li>
+            <Paragraph className="flex cursor-pointer py-2 px-8 hover:text-primary-500">
+              <Link href="/">Home</Link>
+            </Paragraph>
+          </li>
+          <li>
+            <Paragraph className="flex cursor-pointer py-2 px-8 hover:text-primary-500">
+              <Link href="/contact">Contact</Link>
+            </Paragraph>
+          </li>
+          <li>
+            <Paragraph className="flex cursor-pointer py-2 px-8 hover:text-primary-500">
+              <Link href="/privacy-policy">Privacy</Link>
+            </Paragraph>
+          </li>
+        </ul>
+      </animated.nav>
+
+      {/* Margin */}
       <div className="relative h-24 w-full" />
     </>
   );

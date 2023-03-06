@@ -1,5 +1,4 @@
-import Head from 'next/head';
-import { NotFound } from '../../templates/NotFound';
+import { NotFound } from '../../organisms/NotFound';
 import { NextSeo } from 'next-seo';
 
 export const NotFoundPage = () => {

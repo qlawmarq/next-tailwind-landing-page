@@ -23,7 +23,7 @@ export const DEFAULT_SEO = {
     site_name: 'Next Tailwind Landing Page Template',
     images: [
       {
-        url: 'https://tailwind-landing-page-next-template.vercel.app/static/icon.png',
+        url: 'https://tailwind-landing-page-next-template.vercel.app/images/icon.png',
         width: 800,
         height: 600,
         alt: 'Og Image',

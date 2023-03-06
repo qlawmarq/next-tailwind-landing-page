@@ -4,7 +4,7 @@ export const Google: React.FC<HTMLAttributes<HTMLButtonElement>> = (props) => {
   return (
     <button
       {...props}
-      className="mt-3 flex h-14 w-36 items-center justify-center rounded-xl bg-primary-900 text-white"
+      className="m-2 flex h-14 w-36 items-center justify-center rounded-xl bg-primary-900 bg-gradient-to-r from-primary-600 text-white transition ease-in-out hover:bg-primary-300 hover:from-primary-500"
     >
       <div className="mr-3">
         <svg viewBox="30 336.7 120.9 129.2" width="22">

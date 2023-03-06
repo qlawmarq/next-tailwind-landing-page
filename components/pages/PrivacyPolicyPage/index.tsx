@@ -1,6 +1,6 @@
 import { Header } from '../../organisms/Header';
 import { Footer } from '../../organisms/Footer';
-import { PrivacyPolicy } from '../../templates/PrivacyPolicy';
+import { PrivacyPolicy } from '../../organisms/PrivacyPolicy';
 import { useLocale } from '../../../hooks/useLocale';
 import { NextSeo } from 'next-seo';
 
