@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header } from '../../organisms/Header';
 import { Footer } from '../../organisms/Footer';
-import { ContactForm } from '../../templates/ContactForm';
+import { ContactForm } from '../../organisms/ContactForm';
 import { useLocale } from '../../../hooks/useLocale';
 import { NextSeo } from 'next-seo';
 export const ContactPage = () => {
