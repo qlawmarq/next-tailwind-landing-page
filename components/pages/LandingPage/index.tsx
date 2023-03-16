@@ -96,10 +96,10 @@ export const LandingPage = () => {
               </Card>
               <Card
                 className="cursor-pointer"
-                onClick={() => router.push('/features#chatstream')}
+                onClick={() => router.push('/features#chat')}
               >
                 <MdOutlineChat className="m-auto h-24 w-24 fill-primary-300" />
-                <Span className="mb-2">ChatStream</Span>
+                <Span className="mb-2">Chat</Span>
               </Card>
               <Card
                 className="cursor-pointer"
